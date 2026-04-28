@@ -737,6 +737,88 @@ footer {
     justify-content: center;
   }
 }
+
+/* World King Banner */
+.worldking-banner {
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.1) 0%, var(--navy) 50%, rgba(201, 162, 39, 0.05) 100%);
+  padding: 60px 24px;
+  border-top: 1px solid rgba(201, 162, 39, 0.2);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+.worldking-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.worldking-inner:hover {
+  transform: translateY(-4px);
+}
+
+.worldking-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid rgba(201, 162, 39, 0.3);
+  flex-shrink: 0;
+}
+
+.worldking-content {
+  flex: 1;
+}
+
+.worldking-label {
+  display: inline-block;
+  background: rgba(201, 162, 39, 0.2);
+  color: #d4af37;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 4px 12px;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  border-radius: 2px;
+}
+
+.worldking-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--silver-light);
+  font-weight: 500;
+  margin-bottom: 8px;
+  letter-spacing: 0.08em;
+}
+
+.worldking-desc {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.worldking-arrow {
+  font-size: 24px;
+  color: #d4af37;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .worldking-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .worldking-logo {
+    width: 64px;
+    height: 64px;
+  }
+  .worldking-arrow {
+    display: none;
+  }
+}
 </style>
 </head>
 <body>
@@ -928,6 +1010,18 @@ footer {
       ダウンロード
     </a>
   </div>
+</section>
+
+<section class="worldking-banner">
+  <a href="https://hideo-t.github.io/worldkingjapan/" target="_blank" class="worldking-inner">
+    <img src="worldking-logo.jpg" alt="世界王" class="worldking-logo">
+    <div class="worldking-content">
+      <span class="worldking-label">WORLD KING PROJECT</span>
+      <h3 class="worldking-title">世界王プロジェクト</h3>
+      <p class="worldking-desc">人は、誰でも自分の世界の王になれる。AI診断・物語・ツールが融合したプラットフォーム。</p>
+    </div>
+    <span class="worldking-arrow">→</span>
+  </a>
 </section>
 
 <footer>
