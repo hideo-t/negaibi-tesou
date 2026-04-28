@@ -4,23 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>世界王 手相診断所 願い灯（ねがいび）| 白河市南湖公園</title>
-<meta name="description" content="福島県白河市、南湖公園の自然に囲まれた癒しの空間で手相診断。手のひら画像診断も対応。鑑定料500円から。">
+<meta name="description" content="福島県白河市、南湖公園の自然に囲まれた癒しの空間で手相診断。AI×伝統の手相鑑定。鑑定料500円から。">
 <meta property="og:title" content="世界王 手相診断所 願い灯">
 <meta property="og:description" content="その手のひらに、未来を照らす光がある。">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --gold: #d4af37;
-  --gold-light: #f4d03f;
-  --gold-pale: #fef9e7;
-  --dark: #0a0a12;
-  --dark-blue: #0d1b2a;
-  --purple: #2d1b4e;
+  --navy: #0a1628;
+  --navy-light: #152238;
+  --navy-mid: #1a2d4a;
+  --silver: #c0c8d4;
+  --silver-light: #e8ecf2;
+  --accent: #6b8cae;
+  --accent-light: #8aa8c7;
   --white: #ffffff;
-  --gray-light: rgba(255,255,255,0.7);
+  --text: #d0d6e0;
+  --text-muted: #8a94a6;
   --serif: "Noto Serif JP", serif;
   --sans: "Noto Sans JP", sans-serif;
 }
@@ -30,33 +32,11 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--sans);
-  color: var(--white);
-  background: var(--dark);
-  line-height: 1.8;
-}
-
-/* Stars background */
-.stars {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.8), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.5), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.6), transparent),
-    radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.4), transparent),
-    radial-gradient(1px 1px at 160px 120px, rgba(255,255,255,0.7), transparent);
-  background-size: 200px 200px;
-  animation: twinkle 4s ease-in-out infinite alternate;
-}
-
-@keyframes twinkle {
-  0% { opacity: 0.5; }
-  100% { opacity: 1; }
+  font-weight: 300;
+  color: var(--text);
+  background: var(--navy);
+  line-height: 1.9;
+  letter-spacing: 0.02em;
 }
 
 /* Header */
@@ -66,15 +46,15 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(10, 10, 18, 0.9);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(10, 22, 40, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(107, 140, 174, 0.1);
 }
 
 .header-inner {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 18px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,53 +62,54 @@ header {
 
 .logo {
   text-decoration: none;
-  color: var(--gold);
+  color: var(--silver-light);
 }
 
 .logo-main {
   font-family: var(--serif);
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
 }
 
 .logo-sub {
   font-size: 10px;
-  color: var(--gray-light);
-  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  font-weight: 300;
 }
 
 .nav-links {
   display: flex;
-  gap: 8px;
+  gap: 12px;
 }
 
 .nav-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: transparent;
+  border: 1px solid rgba(107, 140, 174, 0.3);
   transition: all 0.3s;
 }
 
 .nav-links a:hover {
-  background: var(--gold);
-  transform: scale(1.1);
+  background: rgba(107, 140, 174, 0.15);
+  border-color: var(--accent);
 }
 
 .nav-links svg {
-  width: 20px;
-  height: 20px;
-  fill: var(--gold);
+  width: 18px;
+  height: 18px;
+  fill: var(--silver);
   transition: fill 0.3s;
 }
 
 .nav-links a:hover svg {
-  fill: var(--dark);
+  fill: var(--accent-light);
 }
 
 /* Hero */
@@ -138,10 +119,10 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 100px 20px 60px;
+  padding: 120px 24px 80px;
   position: relative;
   background:
-    linear-gradient(180deg, rgba(10, 10, 18, 0.7) 0%, rgba(10, 10, 18, 0.85) 100%),
+    linear-gradient(180deg, rgba(10, 22, 40, 0.4) 0%, rgba(10, 22, 40, 0.75) 100%),
     url('hero.jpg');
   background-size: cover;
   background-position: center;
@@ -150,54 +131,48 @@ header {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 600px;
+  max-width: 640px;
 }
 
-.hero-eyebrow {
-  font-size: 14px;
-  color: var(--gold);
-  letter-spacing: 0.3em;
-  margin-bottom: 24px;
-}
-
-.hero-icon {
-  font-size: 80px;
-  margin-bottom: 24px;
-  filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.5));
+.hero-label {
+  font-size: 11px;
+  color: var(--accent-light);
+  letter-spacing: 0.4em;
+  margin-bottom: 32px;
+  font-weight: 400;
 }
 
 .hero h1 {
   font-family: var(--serif);
-  font-size: clamp(36px, 10vw, 56px);
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #c9a227 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: clamp(32px, 8vw, 48px);
+  font-weight: 600;
+  color: var(--white);
   margin-bottom: 8px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
 }
 
 .hero-ruby {
   font-family: var(--serif);
-  font-size: 16px;
-  color: var(--gold);
-  margin-bottom: 32px;
-  letter-spacing: 0.2em;
+  font-size: 14px;
+  color: var(--accent-light);
+  margin-bottom: 40px;
+  letter-spacing: 0.3em;
+  font-weight: 400;
 }
 
 .hero-catch {
   font-family: var(--serif);
-  font-size: clamp(18px, 5vw, 24px);
-  color: var(--white);
+  font-size: clamp(16px, 4vw, 20px);
+  color: var(--silver-light);
   margin-bottom: 16px;
-  line-height: 1.8;
+  line-height: 2;
+  font-weight: 400;
 }
 
 .hero-sub {
-  font-size: 15px;
-  color: var(--gray-light);
-  margin-bottom: 40px;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 48px;
   line-height: 2;
 }
 
@@ -211,24 +186,23 @@ header {
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 16px 32px;
-  border-radius: 50px;
-  font-size: 15px;
-  font-weight: 700;
+  gap: 10px;
+  padding: 16px 36px;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 500;
   text-decoration: none;
+  letter-spacing: 0.1em;
   transition: all 0.3s;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--gold) 0%, #c9a227 100%);
-  color: var(--dark);
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+  background: var(--accent);
+  color: var(--white);
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6);
+  background: var(--accent-light);
 }
 
 .btn-line {
@@ -237,179 +211,171 @@ header {
 }
 
 .btn-line:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(6, 199, 85, 0.4);
+  background: #05b34c;
 }
 
-/* Section common */
+/* Section */
 section {
   position: relative;
   z-index: 1;
-  padding: 80px 20px;
+  padding: 100px 24px;
 }
 
 .section-inner {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 60px;
 }
 
 .section-label {
-  font-size: 12px;
-  color: var(--gold);
-  letter-spacing: 0.3em;
-  margin-bottom: 12px;
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.4em;
+  margin-bottom: 16px;
+  font-weight: 500;
 }
 
 .section-title {
   font-family: var(--serif);
-  font-size: clamp(24px, 6vw, 36px);
-  font-weight: 700;
-  color: var(--white);
+  font-size: clamp(22px, 5vw, 30px);
+  font-weight: 500;
+  color: var(--silver-light);
   letter-spacing: 0.1em;
 }
 
 /* Message */
 .message {
-  background: linear-gradient(180deg, var(--dark) 0%, var(--dark-blue) 100%);
-  text-align: center;
+  background: var(--navy);
+  border-top: 1px solid rgba(107, 140, 174, 0.1);
+  border-bottom: 1px solid rgba(107, 140, 174, 0.1);
 }
 
 .message-text {
   font-family: var(--serif);
-  font-size: clamp(16px, 4vw, 20px);
-  line-height: 2.2;
-  color: var(--gray-light);
-  max-width: 600px;
+  font-size: clamp(15px, 3.5vw, 18px);
+  line-height: 2.4;
+  color: var(--text);
+  text-align: center;
+  max-width: 560px;
   margin: 0 auto;
+  font-weight: 400;
 }
 
 .message-text strong {
-  color: var(--gold);
+  color: var(--silver-light);
   font-weight: 500;
 }
 
 /* Services */
 .services {
-  background: var(--dark-blue);
+  background: var(--navy-light);
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
+  background: rgba(107, 140, 174, 0.1);
 }
 
 .service-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: 16px;
-  padding: 32px 24px;
-  text-align: center;
+  background: var(--navy-light);
+  padding: 40px 32px;
   transition: all 0.3s;
 }
 
 .service-card:hover {
-  background: rgba(212, 175, 55, 0.05);
-  border-color: var(--gold);
-  transform: translateY(-4px);
+  background: var(--navy-mid);
 }
 
 .service-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background: var(--gold);
-  color: var(--dark);
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 50%;
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.2em;
   margin-bottom: 16px;
+  font-weight: 500;
 }
 
 .service-card h3 {
   font-family: var(--serif);
-  font-size: 18px;
-  color: var(--gold);
+  font-size: 16px;
+  color: var(--silver-light);
   margin-bottom: 12px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  font-weight: 500;
 }
 
 .service-card p {
-  font-size: 14px;
-  color: var(--gray-light);
-  line-height: 1.8;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.9;
 }
 
 /* Price */
 .price {
-  background: var(--dark);
+  background: var(--navy);
 }
 
 .price-card {
   max-width: 400px;
   margin: 0 auto;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(45, 27, 78, 0.3) 100%);
-  border: 2px solid var(--gold);
-  border-radius: 24px;
-  padding: 48px 32px;
+  border: 1px solid rgba(107, 140, 174, 0.2);
+  padding: 56px 40px;
   text-align: center;
 }
 
 .price-label {
-  font-size: 14px;
-  color: var(--gray-light);
-  margin-bottom: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.3em;
+  margin-bottom: 24px;
 }
 
 .price-amount {
   font-family: var(--serif);
-  font-size: 64px;
-  font-weight: 700;
-  color: var(--gold);
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--silver-light);
   line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .price-amount span {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .price-note {
-  font-size: 14px;
-  color: var(--gray-light);
+  font-size: 12px;
+  color: var(--text-muted);
   margin-top: 16px;
+  letter-spacing: 0.1em;
 }
 
 /* Access */
 .access {
-  background: var(--dark-blue);
+  background: var(--navy-light);
 }
 
 .access-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 48px;
   align-items: start;
 }
 
 .access-info {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: 16px;
-  padding: 32px;
+  border: 1px solid rgba(107, 140, 174, 0.15);
 }
 
 .access-row {
   display: flex;
-  gap: 16px;
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  gap: 20px;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(107, 140, 174, 0.1);
 }
 
 .access-row:last-child {
@@ -418,50 +384,52 @@ section {
 
 .access-label {
   flex-shrink: 0;
-  width: 80px;
-  font-size: 13px;
-  color: var(--gold);
+  width: 72px;
+  font-size: 11px;
+  color: var(--accent);
   font-weight: 500;
+  letter-spacing: 0.1em;
 }
 
 .access-value {
-  font-size: 15px;
-  color: var(--white);
+  font-size: 14px;
+  color: var(--text);
 }
 
 .access-map {
-  border-radius: 16px;
-  overflow: hidden;
   aspect-ratio: 1;
-  background: rgba(255,255,255,0.05);
+  background: var(--navy-mid);
+  overflow: hidden;
 }
 
 .access-map iframe {
   width: 100%;
   height: 100%;
   border: none;
+  filter: grayscale(30%);
 }
 
 /* CTA */
 .cta {
-  background:
-    radial-gradient(ellipse at 50% 100%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
-    var(--dark);
+  background: var(--navy);
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 24px;
+  border-top: 1px solid rgba(107, 140, 174, 0.1);
 }
 
 .cta-title {
   font-family: var(--serif);
-  font-size: clamp(20px, 5vw, 28px);
-  color: var(--white);
-  margin-bottom: 32px;
-  line-height: 1.8;
+  font-size: clamp(18px, 4vw, 24px);
+  color: var(--silver-light);
+  margin-bottom: 40px;
+  line-height: 2;
+  font-weight: 400;
+  letter-spacing: 0.08em;
 }
 
 .cta-buttons {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 32px;
@@ -471,22 +439,23 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 20px 40px;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: 700;
+  padding: 18px 40px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
   text-decoration: none;
+  letter-spacing: 0.08em;
   transition: all 0.3s;
 }
 
 .cta-btn-instagram {
-  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  background: linear-gradient(135deg, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
   color: var(--white);
 }
 
 .cta-btn-instagram:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(131, 58, 180, 0.4);
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 .cta-btn-line {
@@ -495,39 +464,43 @@ section {
 }
 
 .cta-btn-line:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(6, 199, 85, 0.4);
+  background: #05b34c;
+  transform: translateY(-2px);
 }
 
 .cta-btn svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   fill: currentColor;
 }
 
 .cta-note {
-  font-size: 14px;
-  color: var(--gray-light);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
 }
 
 /* Footer */
 footer {
-  background: var(--dark);
-  border-top: 1px solid rgba(212, 175, 55, 0.1);
-  padding: 40px 20px;
+  background: var(--navy);
+  border-top: 1px solid rgba(107, 140, 174, 0.1);
+  padding: 48px 24px;
   text-align: center;
 }
 
 .footer-logo {
   font-family: var(--serif);
-  font-size: 18px;
-  color: var(--gold);
+  font-size: 14px;
+  color: var(--silver);
   margin-bottom: 8px;
+  letter-spacing: 0.2em;
+  font-weight: 400;
 }
 
 .footer-copy {
-  font-size: 12px;
-  color: rgba(255,255,255,0.3);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
 }
 
 /* Responsive */
@@ -537,33 +510,37 @@ footer {
   }
 
   .access-map {
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/10;
   }
 
-  .hero-icon {
-    font-size: 60px;
-  }
-
-  .price-amount {
-    font-size: 48px;
+  section {
+    padding: 80px 20px;
   }
 }
 
 @media (max-width: 480px) {
   .header-inner {
-    padding: 12px 16px;
+    padding: 14px 16px;
   }
 
   .logo-main {
-    font-size: 16px;
+    font-size: 15px;
   }
 
-  section {
-    padding: 60px 16px;
+  .hero {
+    padding: 100px 20px 60px;
   }
 
   .service-card {
-    padding: 24px 20px;
+    padding: 32px 24px;
+  }
+
+  .price-card {
+    padding: 40px 28px;
+  }
+
+  .price-amount {
+    font-size: 44px;
   }
 
   .cta-btn {
@@ -575,19 +552,17 @@ footer {
 </head>
 <body>
 
-<div class="stars"></div>
-
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
       <div class="logo-main">世界王 手相診断所</div>
-      <div class="logo-sub">願い灯 ねがいび</div>
+      <div class="logo-sub">願い灯 NEGAIBI</div>
     </a>
     <div class="nav-links">
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+      <a href="https://www.instagram.com/negaibi_sekaio?igsh=MXEybXRvY29wcHByaw==" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
-      <a href="https://line.me/" target="_blank" rel="noopener" aria-label="LINE">
+      <a href="https://lin.ee/sG9BELl" target="_blank" rel="noopener" aria-label="LINE">
         <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
       </a>
     </div>
@@ -596,17 +571,16 @@ footer {
 
 <section class="hero">
   <div class="hero-content">
-    <p class="hero-eyebrow">南湖公園のほとり</p>
-    <div class="hero-icon">🤚✨</div>
+    <p class="hero-label">PALM READING × AI</p>
     <h1>世界王</h1>
-    <p class="hero-ruby">─ 手相診断所 ─</p>
+    <p class="hero-ruby">─ 手相診断所 願い灯 ─</p>
     <p class="hero-catch">その手のひらに、<br>未来を照らす光がある。</p>
     <p class="hero-sub">
-      迷い・悩み・不安…<br>
-      その答えは、あなたの中にある。
+      伝統の叡智と最先端テクノロジーの融合<br>
+      より深く、より正確に、あなたの可能性を読み解く
     </p>
     <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary">無料体験を予約</a>
+      <a href="https://lin.ee/sG9BELl" target="_blank" rel="noopener" class="btn btn-line">LINEで予約</a>
     </div>
   </div>
 </section>
@@ -653,10 +627,10 @@ footer {
       <div class="service-card">
         <div class="service-num">05</div>
         <h3>癒しの空間</h3>
-        <p>自然に囲まれた空間で、心をリセットできます。</p>
+        <p>南湖公園の自然に囲まれた空間で、心をリセットできます。</p>
       </div>
       <div class="service-card">
-        <div class="service-num">✨</div>
+        <div class="service-num">06</div>
         <h3>手のひら画像診断</h3>
         <p>写真を送るだけでOK。遠方の方もお気軽にご相談いただけます。</p>
       </div>
@@ -671,9 +645,9 @@ footer {
       <h2 class="section-title">鑑定料</h2>
     </div>
     <div class="price-card">
-      <p class="price-label">鑑定料金</p>
+      <p class="price-label">PALM READING</p>
       <p class="price-amount"><span>¥</span>500<span>〜</span></p>
-      <p class="price-note">（税込）</p>
+      <p class="price-note">税込</p>
     </div>
   </div>
 </section>
@@ -702,10 +676,6 @@ footer {
           <span class="access-label">定休日</span>
           <span class="access-value">不定休</span>
         </div>
-        <div class="access-row">
-          <span class="access-label">ロケーション</span>
-          <span class="access-value">南湖公園の自然に囲まれた<br>癒しの空間</span>
-        </div>
       </div>
       <div class="access-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3189.5!2d140.2!3d37.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDA2JzAwLjAiTiAxNDDCsDEyJzAwLjAiRQ!5e0!3m2!1sja!2sjp!4v1600000000000!5m2!1sja!2sjp" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -721,13 +691,13 @@ footer {
       無料体験 受付中
     </h2>
     <div class="cta-buttons">
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="cta-btn cta-btn-instagram">
+      <a href="https://www.instagram.com/negaibi_sekaio?igsh=MXEybXRvY29wcHByaw==" target="_blank" rel="noopener" class="cta-btn cta-btn-instagram">
         <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        Instagramで予約
+        Instagram
       </a>
-      <a href="https://line.me/" target="_blank" rel="noopener" class="cta-btn cta-btn-line">
+      <a href="https://lin.ee/sG9BELl" target="_blank" rel="noopener" class="cta-btn cta-btn-line">
         <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-        LINEで予約
+        LINE
       </a>
     </div>
     <p class="cta-note">DMにてお気軽にお問い合わせください</p>
@@ -735,8 +705,8 @@ footer {
 </section>
 
 <footer>
-  <div class="footer-logo">願い灯</div>
-  <p class="footer-copy">&copy; 2025 世界王 手相診断所. All rights reserved.</p>
+  <div class="footer-logo">願い灯 NEGAIBI</div>
+  <p class="footer-copy">&copy; 2025 世界王 手相診断所</p>
 </footer>
 
 </body>
