@@ -61,21 +61,36 @@ header {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   text-decoration: none;
   color: var(--silver-light);
 }
 
+.logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .logo-main {
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
 }
 
 .logo-sub {
   font-size: 10px;
   color: var(--text-muted);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   font-weight: 300;
 }
 
@@ -555,8 +570,11 @@ footer {
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
-      <div class="logo-main">世界王 手相診断所</div>
-      <div class="logo-sub">願い灯 NEGAIBI</div>
+      <img src="logo.jpg" alt="願い灯" class="logo-img">
+      <div class="logo-text">
+        <div class="logo-main">世界王 手相診断所</div>
+        <div class="logo-sub">願い灯 NEGAIBI</div>
+      </div>
     </a>
     <div class="nav-links">
       <a href="https://www.instagram.com/negaibi_sekaio?igsh=MXEybXRvY29wcHByaw==" target="_blank" rel="noopener" aria-label="Instagram">
@@ -678,7 +696,7 @@ footer {
         </div>
       </div>
       <div class="access-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3189.5!2d140.2!3d37.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDA2JzAwLjAiTiAxNDDCsDEyJzAwLjAiRQ!5e0!3m2!1sja!2sjp!4v1600000000000!5m2!1sja!2sjp" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3181.727916557458!2d140.21895469999998!3d37.1115937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60203b34168b9b87%3A0x53e72d835b2308e0!2z6aGY44GE54Gv77yI44Gt44GM44GE44Gz77yJ5LiW55WM546L5omL55u46Ki65pat5omA!5e0!3m2!1sja!2sjp!4v1777337456893!5m2!1sja!2sjp" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
       </div>
     </div>
   </div>
