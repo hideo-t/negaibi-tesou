@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>事業概要 | 願い灯 世界王手相診断所</title>
+<meta name="description" content="願い灯（NEGAIBI）は、AI画像診断技術を用いた性格タイプ判定エンターテインメントサービスです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --navy-light: #152238;
+  --navy-mid: #1a2d4a;
+  --silver: #c0c8d4;
+  --silver-light: #e8ecf2;
+  --accent: #6b8cae;
+  --accent-light: #8aa8c7;
+  --white: #ffffff;
+  --text: #d0d6e0;
+  --text-muted: #8a94a6;
+  --serif: "Noto Serif JP", serif;
+  --sans: "Noto Sans JP", sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  font-weight: 300;
+  color: var(--text);
+  background: var(--navy);
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 22, 40, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(107, 140, 174, 0.1);
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--silver-light);
+}
+
+.logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.logo-text { display: flex; flex-direction: column; }
+.logo-main { font-family: var(--serif); font-size: 16px; font-weight: 500; letter-spacing: 0.12em; }
+.logo-sub { font-size: 10px; color: var(--text-muted); letter-spacing: 0.15em; font-weight: 300; }
+
+.back-link {
+  color: var(--accent-light);
+  text-decoration: none;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.back-link:hover { color: var(--white); }
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 5vw, 38px);
+  font-weight: 500;
+  color: var(--silver-light);
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--silver-light);
+  margin: 48px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(107, 140, 174, 0.2);
+  letter-spacing: 0.08em;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--accent-light);
+  margin: 32px 0 16px;
+}
+
+p {
+  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.highlight {
+  background: var(--navy-light);
+  border-left: 3px solid var(--accent);
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-size: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(107, 140, 174, 0.1);
+}
+
+th {
+  background: var(--navy-light);
+  color: var(--accent-light);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+td { color: var(--text); }
+
+ul, ol {
+  margin: 16px 0 16px 24px;
+  font-size: 15px;
+}
+
+li { margin-bottom: 8px; }
+
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.type-card {
+  background: var(--navy-light);
+  border: 1px solid rgba(107, 140, 174, 0.15);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.type-card h4 {
+  color: var(--accent-light);
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.type-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.7;
+}
+
+footer {
+  background: var(--navy);
+  border-top: 1px solid rgba(107, 140, 174, 0.1);
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.footer-logo { font-family: var(--serif); font-size: 14px; color: var(--silver); margin-bottom: 8px; letter-spacing: 0.2em; }
+.footer-copy { font-size: 10px; color: var(--text-muted); letter-spacing: 0.1em; }
+
+@media (max-width: 600px) {
+  main { padding: 100px 16px 60px; }
+  table { font-size: 12px; }
+  th, td { padding: 10px 12px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="願い灯" class="logo-img">
+      <div class="logo-text">
+        <div class="logo-main">世界王 手相診断所</div>
+        <div class="logo-sub">願い灯 NEGAIBI</div>
+      </div>
+    </a>
+    <a href="index.html" class="back-link">← トップに戻る</a>
+  </div>
+</header>
+
+<main>
+  <h1>事業概要</h1>
+  <p class="page-subtitle">BUSINESS OVERVIEW</p>
+
+  <div class="highlight">
+    <strong>願い灯（ねがいび）は、AI画像診断技術を用いた性格タイプ判定エンターテインメントサービスです。</strong><br><br>
+    手のひらの画像をAIが解析し、皮膚紋理（しわ・線・丘の形状）のパターンから6つの性格タイプを判定します。占い・鑑定・スピリチュアルサービスではなく、<strong>画像認識技術に基づく性格診断エンターテインメント</strong>として提供します。
+  </div>
+
+  <h2>サービス分類</h2>
+  <table>
+    <tr><th>業種</th><td>画像診断サービス業 / エンターテインメント業</td></tr>
+    <tr><th>サービス名</th><td>願い灯（NEGAIBI）AI手相性格診断</td></tr>
+    <tr><th>技術基盤</th><td>AI画像認識・パターンマッチング・生成AI</td></tr>
+    <tr><th>カテゴリ</th><td>性格タイプ診断エンターテインメント（占いではありません）</td></tr>
+  </table>
+
+  <h3>占いとの違い</h3>
+  <table>
+    <tr><th></th><th>占い・鑑定</th><th>願い灯（画像診断）</th></tr>
+    <tr><td>判定者</td><td>占い師（人間）</td><td>AI（画像認識）</td></tr>
+    <tr><td>根拠</td><td>経験・直感・霊感</td><td>画像パターン解析</td></tr>
+    <tr><td>対象</td><td>運勢・未来・相性</td><td>性格タイプの判定</td></tr>
+    <tr><td>再現性</td><td>占い師により異なる</td><td>同一画像なら同一結果</td></tr>
+    <tr><td>効果の保証</td><td>「当たる」と暗示</td><td>「当たる」とは言わない</td></tr>
+  </table>
+
+  <h2>AI画像診断エンジン</h2>
+  <ol>
+    <li><strong>画像取得</strong> — カメラまたはスマートフォンで手のひらを撮影</li>
+    <li><strong>画像解析</strong> — AIが皮膚紋理のパターン（線の長さ・角度・密度・丘の隆起）を数値化</li>
+    <li><strong>タイプ判定</strong> — 6つの性格タイプに分類（スコアリング方式）</li>
+    <li><strong>名称生成</strong> — 判定結果に基づき「王名」「家名」「称号」を生成</li>
+    <li><strong>紋章生成</strong> — 生成AI（Stable Diffusion）により世界に1つの紋章画像を生成</li>
+    <li><strong>結果提供</strong> — 画面表示・印刷・QRコード・SNSシェア</li>
+  </ol>
+
+  <h2>6つの性格タイプ</h2>
+  <div class="types-grid">
+    <div class="type-card">
+      <h4>創造者（Creator）</h4>
+      <p>独創性・芸術性・発想力</p>
+    </div>
+    <div class="type-card">
+      <h4>商人型（Merchant）</h4>
+      <p>交渉力・実務能力・経済感覚</p>
+    </div>
+    <div class="type-card">
+      <h4>構造派（Architect）</h4>
+      <p>論理性・計画性・分析力</p>
+    </div>
+    <div class="type-card">
+      <h4>回復型（Healer）</h4>
+      <p>共感力・癒し・サポート力</p>
+    </div>
+    <div class="type-card">
+      <h4>共鳴型（Resonator）</h4>
+      <p>協調性・直感・コミュニケーション力</p>
+    </div>
+    <div class="type-card">
+      <h4>霊的直感型（Seer）</h4>
+      <p>洞察力・感受性・先見性</p>
+    </div>
+  </div>
+
+  <h2>事業モデル</h2>
+  <ul>
+    <li>在庫リスク：<strong>なし</strong>（デジタルサービス）</li>
+    <li>原価：<strong>ほぼゼロ</strong>（AI処理・通信費のみ）</li>
+    <li>粗利率：<strong>90%以上</strong></li>
+    <li>人件費：<strong>スタッフ1名で運営可能</strong></li>
+  </ul>
+
+  <h2>運営体制</h2>
+  <table>
+    <tr><th>所在地</th><td>福島県白河市</td></tr>
+    <tr><th>代表</th><td>高橋秀夫</td></tr>
+    <tr><th>事業主体</th><td>株式会社美高商事</td></tr>
+    <tr><th>連絡先</th><td>admin@wkjp.net</td></tr>
+    <tr><th>LINE公式</th><td>@888nsgkb</td></tr>
+  </table>
+
+  <h2>法的位置づけ</h2>
+  <p>願い灯は<strong>AI画像診断に基づく性格タイプ判定エンターテインメント</strong>です。以下の行為は行いません。</p>
+  <ul>
+    <li>未来の予測・予言</li>
+    <li>運勢・運気の鑑定</li>
+    <li>恋愛・結婚・健康に関する助言</li>
+    <li>霊感・スピリチュアルに基づく判断</li>
+    <li>「当たる」「的中する」等の効果保証</li>
+  </ul>
+
+  <p style="margin-top: 48px; font-size: 12px; color: var(--text-muted); text-align: center;">
+    願い灯 FC本部 / 株式会社美高商事 / 2026年版<br>
+    本資料は事業説明を目的としたものであり、契約条件を確定するものではありません。
+  </p>
+</main>
+
+<footer>
+  <div class="footer-logo">願い灯 NEGAIBI</div>
+  <p class="footer-copy">&copy; 2025 世界王 手相診断所</p>
+</footer>
+
+</body>
+</html>
