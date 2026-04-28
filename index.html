@@ -623,6 +623,52 @@ section {
   letter-spacing: 0.1em;
 }
 
+/* Flyer */
+.flyer {
+  background: var(--navy-light);
+  text-align: center;
+}
+
+.flyer-image {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto 32px;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.flyer-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.flyer-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.flyer-download:hover {
+  background: var(--accent-light);
+}
+
+.flyer-download svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
 /* Footer */
 footer {
   background: var(--navy);
@@ -713,6 +759,7 @@ footer {
         <li><a href="#price">料金</a></li>
         <li><a href="#access">アクセス</a></li>
         <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="#flyer">フライヤー</a></li>
       </ul>
       <div class="nav-sns">
         <a href="https://www.instagram.com/negaibi_sekaio?igsh=MXEybXRvY29wcHByaw==" target="_blank" rel="noopener" aria-label="Instagram">
@@ -862,6 +909,22 @@ footer {
       </a>
     </div>
     <p class="cta-note">DMにてお気軽にお問い合わせください</p>
+  </div>
+</section>
+
+<section class="flyer" id="flyer">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">FLYER</p>
+      <h2 class="section-title">フライヤー</h2>
+    </div>
+    <div class="flyer-image">
+      <img src="flyer.jpg" alt="願い灯 世界王手相診断所 フライヤー">
+    </div>
+    <a href="flyer.jpg" download="negaibi_flyer.jpg" class="flyer-download">
+      <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+      ダウンロード
+    </a>
   </div>
 </section>
 
