@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>占い師募集 | 願い灯マッチング</title>
+<meta name="description" content="願い灯マッチングでは、AI手相診断と連動した占い師マッチングサービスの占い師（プロバイダー）を募集しています。多言語対応・全国稼働・オンライン/対面OK。">
+<meta property="og:title" content="占い師募集 | 願い灯マッチング">
+<meta property="og:description" content="AI診断データから依頼者に最適な占い師をマッチング。あなたの占術を活かせる新しいプラットフォームです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --navy-light: #152238;
+  --navy-mid: #1a2d4a;
+  --gold: #c9a34e;
+  --gold-light: #f0d68a;
+  --gold-pale: #ede0c4;
+  --silver: #c0c8d4;
+  --silver-light: #e8ecf2;
+  --accent: #6b8cae;
+  --white: #ffffff;
+  --text: #d0d6e0;
+  --text-muted: #8a94a6;
+  --serif: "Noto Serif JP", serif;
+  --sans: "Noto Sans JP", sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-weight: 300;
+  color: var(--text);
+  background: var(--navy);
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+/* Header */
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 22, 40, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 14px 28px;
+  border-bottom: 1px solid rgba(192,200,212,0.1);
+}
+.header-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--white); }
+.logo-img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 1px solid rgba(192,200,212,0.25); }
+.logo-text { display: flex; flex-direction: column; }
+.logo-main { font-family: var(--serif); font-size: 12px; letter-spacing: 0.15em; color: var(--gold-light); }
+.logo-sub { font-size: 10px; letter-spacing: 0.2em; color: var(--text-muted); }
+.back-link { color: var(--text-muted); font-size: 13px; text-decoration: none; transition: color .2s; }
+.back-link:hover { color: var(--gold-light); }
+
+/* Hero */
+.hero {
+  padding: 140px 24px 80px;
+  text-align: center;
+  background: radial-gradient(ellipse at center, rgba(201,163,78,0.10), transparent 70%), var(--navy);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ""; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ccircle cx='10' cy='10' r='1' fill='%23c9a34e' opacity='0.3'/%3E%3Ccircle cx='80' cy='30' r='0.7' fill='%23c9a34e' opacity='0.2'/%3E%3Ccircle cx='40' cy='70' r='1.2' fill='%23c9a34e' opacity='0.25'/%3E%3C/svg%3E");
+  opacity: 0.5; pointer-events: none;
+}
+.hero-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+.hero-label {
+  display: inline-block; font-family: var(--serif);
+  font-size: 12px; letter-spacing: 0.35em;
+  color: var(--gold); margin-bottom: 22px;
+  padding: 5px 14px; border: 1px solid var(--gold);
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(34px, 6vw, 54px);
+  font-weight: 700; letter-spacing: 0.08em;
+  background: linear-gradient(135deg, var(--gold-light), var(--white), var(--gold));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  margin-bottom: 14px; line-height: 1.35;
+}
+.hero-sub {
+  font-family: var(--serif); font-size: 15px;
+  color: var(--gold-pale); letter-spacing: 0.1em;
+  margin-bottom: 32px;
+}
+.hero-lead {
+  font-size: 14px; color: var(--silver);
+  line-height: 1.9; max-width: 580px; margin: 0 auto 36px;
+}
+.hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 30px; border-radius: 2px;
+  font-size: 13px; font-weight: 500; text-decoration: none;
+  letter-spacing: 0.1em; transition: all 0.3s;
+}
+.btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy); font-weight: 700; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,163,78,0.4); }
+.btn-line { background: #06C755; color: var(--white); }
+.btn-line:hover { background: #05b34c; }
+.btn-ghost { background: transparent; color: var(--gold-light); border: 1px solid rgba(201,163,78,0.4); }
+.btn-ghost:hover { background: rgba(201,163,78,0.1); }
+
+/* Section */
+section { padding: 90px 24px; position: relative; }
+.section-inner { max-width: 1080px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-label { font-family: var(--serif); font-size: 11px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 12px; }
+.section-title { font-family: var(--serif); font-size: clamp(26px, 4vw, 36px); font-weight: 500; color: var(--white); letter-spacing: 0.06em; }
+
+/* Why us */
+.why-grid {
+  display: grid; gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.why-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,163,78,0.18);
+  border-radius: 4px; padding: 28px 24px;
+  transition: all 0.3s;
+}
+.why-card:hover {
+  border-color: rgba(201,163,78,0.5);
+  transform: translateY(-3px);
+}
+.why-icon { font-size: 32px; margin-bottom: 14px; display: block; }
+.why-card h3 { font-family: var(--serif); font-size: 17px; color: var(--gold-light); margin-bottom: 10px; letter-spacing: 0.05em; }
+.why-card p { font-size: 13px; color: var(--silver); line-height: 1.85; }
+
+/* Terms (報酬) */
+.terms-bg { background: rgba(255,255,255,0.015); }
+.terms-table {
+  width: 100%; max-width: 760px; margin: 0 auto;
+  border-collapse: collapse; font-size: 14px;
+}
+.terms-table th, .terms-table td {
+  padding: 16px 20px; text-align: left;
+  border-bottom: 1px solid rgba(201,163,78,0.15);
+}
+.terms-table th {
+  font-family: var(--serif); color: var(--gold);
+  font-weight: 400; letter-spacing: 0.1em;
+  width: 40%; vertical-align: top;
+}
+.terms-table td { color: var(--silver); }
+.terms-table td strong { color: var(--white); font-weight: 600; }
+.terms-note {
+  max-width: 760px; margin: 24px auto 0; padding: 16px 20px;
+  background: rgba(107,140,174,0.08);
+  border-left: 3px solid var(--accent);
+  font-size: 12px; color: var(--text-muted); line-height: 1.8;
+}
+
+/* Conditions */
+.cond-list {
+  max-width: 720px; margin: 0 auto;
+  list-style: none;
+}
+.cond-list li {
+  position: relative; padding: 14px 14px 14px 44px;
+  border-bottom: 1px solid rgba(201,163,78,0.12);
+  font-size: 14px; color: var(--silver);
+}
+.cond-list li::before {
+  content: "✓"; position: absolute; left: 14px; top: 14px;
+  color: var(--gold); font-weight: 700;
+}
+.cond-list li strong { color: var(--white); }
+
+/* Flow (応募〜稼働) */
+.flow {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  position: relative;
+}
+.flow-step {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,163,78,0.15);
+  border-radius: 4px; padding: 22px 18px;
+  text-align: center; position: relative;
+}
+.flow-num {
+  display: inline-block; width: 32px; height: 32px;
+  border-radius: 50%; background: var(--gold);
+  color: var(--navy); font-weight: 700; line-height: 32px;
+  margin-bottom: 10px; font-family: var(--serif);
+}
+.flow-step h4 { font-family: var(--serif); font-size: 15px; color: var(--gold-light); margin-bottom: 8px; }
+.flow-step p { font-size: 12px; color: var(--silver); line-height: 1.7; }
+
+/* Work styles */
+.style-grid {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.style-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,163,78,0.2);
+  padding: 24px 20px; border-radius: 4px;
+}
+.style-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+.style-card h4 { font-family: var(--serif); color: var(--gold-light); margin-bottom: 6px; font-size: 16px; }
+.style-card p { font-size: 12px; color: var(--silver); line-height: 1.75; }
+
+/* FAQ */
+.faq-bg { background: rgba(255,255,255,0.015); }
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,163,78,0.12);
+  border-radius: 4px; margin-bottom: 10px;
+  overflow: hidden;
+}
+.faq-item summary {
+  padding: 18px 22px; cursor: pointer;
+  font-family: var(--serif); color: var(--gold-light);
+  font-size: 14px; letter-spacing: 0.05em;
+  list-style: none; display: flex; align-items: center; gap: 12px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before {
+  content: "Q"; color: var(--gold); font-weight: 700;
+  display: inline-block; min-width: 18px;
+}
+.faq-item summary::after {
+  content: "▼"; color: var(--text-muted); font-size: 10px;
+  margin-left: auto; transition: transform 0.2s;
+}
+.faq-item[open] summary::after { transform: rotate(180deg); }
+.faq-content {
+  padding: 0 22px 18px 52px;
+  font-size: 13px; color: var(--silver); line-height: 1.9;
+}
+
+/* Apply CTA */
+.apply-cta {
+  background: linear-gradient(135deg, rgba(201,163,78,0.12), rgba(107,140,174,0.06));
+  padding: 80px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(201,163,78,0.2);
+  border-bottom: 1px solid rgba(201,163,78,0.2);
+}
+.apply-cta h2 { font-family: var(--serif); font-size: 28px; color: var(--white); margin-bottom: 12px; letter-spacing: 0.05em; }
+.apply-cta p { font-size: 14px; color: var(--silver); margin-bottom: 30px; max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.9; }
+.apply-steps {
+  display: flex; justify-content: center; gap: 8px; align-items: center;
+  flex-wrap: wrap; margin-bottom: 30px;
+  font-size: 12px; color: var(--text-muted);
+}
+.apply-steps .step { padding: 4px 10px; border: 1px solid rgba(201,163,78,0.25); border-radius: 99px; }
+.apply-steps .arrow { color: var(--gold); }
+
+/* Footer */
+footer {
+  padding: 40px 24px; text-align: center;
+  color: var(--text-muted); font-size: 12px;
+  border-top: 1px solid rgba(192,200,212,0.08);
+}
+footer .footer-links { margin-top: 8px; }
+footer .footer-links a { color: var(--text-muted); text-decoration: none; margin: 0 8px; }
+footer .footer-links a:hover { color: var(--gold-light); }
+
+@media (max-width: 600px) {
+  section { padding: 60px 18px; }
+  .hero { padding: 100px 18px 60px; }
+  .terms-table th, .terms-table td { display: block; width: 100%; padding: 10px 16px; }
+  .terms-table th { padding-bottom: 4px; }
+}
+
+/* 言語スイッチャー */
+.i18n-switch{position:fixed;bottom:18px;right:18px;z-index:200;display:flex;flex-wrap:wrap;gap:4px;background:rgba(10,22,40,.92);border:1px solid rgba(192,200,212,.25);border-radius:99px;padding:5px;backdrop-filter:blur(12px);box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.i18n-switch button{background:transparent;color:#c0c8d4;border:0;cursor:pointer;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.04em;padding:6px 11px;border-radius:99px;transition:all .15s}
+.i18n-switch button:hover{background:rgba(192,200,212,.12);color:#fff}
+.i18n-switch button.active{background:linear-gradient(135deg,#6b8cae,#8aa8c7);color:#fff;font-weight:600}
+.ja-only-notice{background:rgba(107,140,174,.12);border-left:3px solid #6b8cae;border-radius:0 8px 8px 0;padding:10px 14px;margin:24px auto;max-width:760px;font-size:12px;color:#8aa8c7;display:none}
+body[data-lang="en"] .ja-only-notice,body[data-lang="zh-TW"] .ja-only-notice,body[data-lang="zh-CN"] .ja-only-notice,body[data-lang="ko"] .ja-only-notice{display:block}
+@media(max-width:600px){.i18n-switch{bottom:12px;right:12px;padding:4px;gap:2px}.i18n-switch button{font-size:10px;padding:5px 8px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="願い灯" class="logo-img">
+      <div class="logo-text">
+        <span class="logo-main" data-i18n="logo.main">世界王 手相診断所</span>
+        <span class="logo-sub" data-i18n="logo.sub">願い灯 NEGAIBI</span>
+      </div>
+    </a>
+    <a href="index.html" class="back-link" data-i18n="common.back">← トップに戻る</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-label">FORTUNE TELLER RECRUITMENT</span>
+    <h1>占い師、募集中。</h1>
+    <p class="hero-sub">— あなたの占術を、最適な依頼者へ。 —</p>
+    <p class="hero-lead">
+      願い灯マッチングは、AI手相診断データを基に<br>
+      <strong>依頼者に最適な占い師を提案する</strong>新しいプラットフォームです。<br>
+      多言語対応により、国内のみならずインバウンド観光客にもリーチできます。
+    </p>
+    <p class="ja-only-notice" data-i18n="common.ja_only">※ このページの詳細は日本語のみご用意しています。</p>
+    <div class="hero-cta">
+      <a href="https://lin.ee/sG9BELl" target="_blank" rel="noopener" class="btn btn-line">📱 LINEで応募する</a>
+      <a href="#apply" class="btn btn-ghost">▼ 詳細を見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">WHY US</p>
+      <h2 class="section-title">なぜ、願い灯か。</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon">🤖</span>
+        <h3>AIデータマッチング</h3>
+        <p>AI手相診断の6タイプ判定に基づき、依頼者と最も相性の良い占い師を自動提案。あなたの得意分野で確実に依頼を獲得できます。</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">🌏</span>
+        <h3>多言語インバウンド対応</h3>
+        <p>日本語・英語・繁体字・簡体字・韓国語の5言語に対応。外国語が話せる占い師なら、観光客向け鑑定で単価アップが可能です。</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">📅</span>
+        <h3>柔軟な働き方</h3>
+        <p>オンライン（ビデオ/チャット）・対面（南湖店）・出張、稼働時間も完全自由。本業の合間や副業として、月数時間からでも稼働できます。</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">💎</span>
+        <h3>ブランド力</h3>
+        <p>「世界王 手相診断所 願い灯」のブランドの下、AI診断との連動で集客自動化。あなたは鑑定に集中するだけ。</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">💰</span>
+        <h3>透明な報酬</h3>
+        <p>手数料率は明示。月次レポートで売上・受注数・評価が見える化。Stripe Connect で振込もスピーディ。</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">🛡</span>
+        <h3>安心の運営</h3>
+        <p>クレーマー対応・支払い保証・本人確認制度。誠実な占い師が、誠実な依頼者と出会える場をご提供します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 報酬・条件 -->
+<section class="terms-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">TERMS</p>
+      <h2 class="section-title">報酬・契約条件</h2>
+    </div>
+    <table class="terms-table">
+      <tr>
+        <th>契約形態</th>
+        <td>業務委託契約（個人事業主 or 法人）</td>
+      </tr>
+      <tr>
+        <th>月会費</th>
+        <td><strong>¥1,000/月</strong>（プラットフォーム利用料）</td>
+      </tr>
+      <tr>
+        <th>手数料</th>
+        <td>鑑定料の<strong>15%</strong>（Stripe決済手数料含む）</td>
+      </tr>
+      <tr>
+        <th>支払サイクル</th>
+        <td>月末締め・翌月15日払い（Stripe Connect 経由で銀行振込）</td>
+      </tr>
+      <tr>
+        <th>稼働時間</th>
+        <td>完全自由（月最低稼働なし。長期休止も事前連絡で可）</td>
+      </tr>
+      <tr>
+        <th>鑑定料設定</th>
+        <td>占い師自身が設定（推奨レンジ: ¥1,500〜¥10,000 / 30分）</td>
+      </tr>
+      <tr>
+        <th>稼働場所</th>
+        <td>オンライン（Zoom等）/ 南湖店（福島県白河市）/ 出張（占い師判断）</td>
+      </tr>
+      <tr>
+        <th>キャンセル規定</th>
+        <td>顧客都合: 24h前まで無料、以降は鑑定料の50%（プラットフォーム規定）</td>
+      </tr>
+    </table>
+    <div class="terms-note">
+      💡 <strong>収入シミュレーション例</strong><br>
+      鑑定料 ¥3,000 / 30分、月10件受注の場合 → 売上 ¥30,000、手数料 ¥4,500、月会費 ¥1,000、<strong>手取り ¥24,500</strong>。<br>
+      週末を中心に稼働する副業占い師なら、月¥2〜5万円程度を見込めます。
+    </div>
+  </div>
+</section>
+
+<!-- 募集条件 -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">REQUIREMENTS</p>
+      <h2 class="section-title">募集条件</h2>
+    </div>
+    <ul class="cond-list">
+      <li><strong>占い経験 3年以上</strong>、または <strong>占術関連の資格保有</strong>（タロット、四柱推命、手相、九星気学、西洋占星術、数秘術 等）</li>
+      <li><strong>本人確認書類</strong>提出可能な方（運転免許証・マイナンバーカード等）</li>
+      <li><strong>誠実な接客</strong>ができ、依頼者の心に寄り添える方</li>
+      <li><strong>規約遵守</strong>:「効果保証しない」「霊感商法を行わない」「悪質な追加販売をしない」</li>
+      <li><strong>業務委託契約</strong>を結べる成人（個人事業主 or 法人代表者）</li>
+      <li><strong>Stripe</strong>に出金用銀行口座を登録できる方</li>
+      <li>オンライン鑑定希望者は<strong>ビデオ通話環境</strong>（PC/スマホ + Wi-Fi）が整っている方</li>
+      <li>※ 外国語対応可能な方 / 過去に有名占いサイトでの実績がある方は特に歓迎</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 仕事の流れ -->
+<section class="terms-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">FLOW</p>
+      <h2 class="section-title">応募から稼働まで</h2>
+    </div>
+    <div class="flow">
+      <div class="flow-step">
+        <span class="flow-num">1</span>
+        <h4>LINE友達追加</h4>
+        <p>願い灯公式LINE に友だち追加 → 「占い師希望」と送信</p>
+      </div>
+      <div class="flow-step">
+        <span class="flow-num">2</span>
+        <h4>応募フォーム</h4>
+        <p>自動返信のフォームURLから、経歴・占術・希望条件を記入（5〜10分）</p>
+      </div>
+      <div class="flow-step">
+        <span class="flow-num">3</span>
+        <h4>面接</h4>
+        <p>本部より連絡 → オンライン面接（30分程度）</p>
+      </div>
+      <div class="flow-step">
+        <span class="flow-num">4</span>
+        <h4>採用・契約</h4>
+        <p>合格者には業務委託契約書を送付。本人確認・口座登録を完了</p>
+      </div>
+      <div class="flow-step">
+        <span class="flow-num">5</span>
+        <h4>稼働開始</h4>
+        <p>プロフィール公開 → 依頼受付スタート。即日から鑑定可能</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 働き方 -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">WORK STYLE</p>
+      <h2 class="section-title">3つの働き方</h2>
+    </div>
+    <div class="style-grid">
+      <div class="style-card">
+        <span class="style-icon">💻</span>
+        <h4>オンライン鑑定</h4>
+        <p>Zoom・チャット・電話で全国どこからでも鑑定可能。在宅副業として最適。</p>
+      </div>
+      <div class="style-card">
+        <span class="style-icon">🏪</span>
+        <h4>南湖店 対面鑑定</h4>
+        <p>福島県白河市 南湖公園内の本店で対面鑑定。観光客対応で英語/中国語/韓国語が活かせます。</p>
+      </div>
+      <div class="style-card">
+        <span class="style-icon">🚗</span>
+        <h4>出張鑑定</h4>
+        <p>イベント・パーティー・カフェなどへの出張も可能。出張料は占い師が設定。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">よくある質問</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>占い師の経験が浅いのですが応募できますか？</summary>
+        <div class="faq-content">原則として3年以上の経験 or 占術関連の資格保有を採用基準としています。経験は浅いが資格を持っている、または師事した経験がある等、実力を示せる場合はご相談ください。</div>
+      </details>
+      <details class="faq-item">
+        <summary>本業があるのですが、副業でも大丈夫ですか？</summary>
+        <div class="faq-content">問題ありません。稼働時間は完全自由で、月最低稼働ノルマもありません。週末のみ・夜のみ等の働き方が可能です。</div>
+      </details>
+      <details class="faq-item">
+        <summary>顔出しは必須ですか？</summary>
+        <div class="faq-content">プロフィール写真は必須ですが、顔は出さず手元やシンボリックな画像でも可能です。ただし対面鑑定とビデオ通話鑑定は除きます。</div>
+      </details>
+      <details class="faq-item">
+        <summary>独自の屋号・芸名で活動できますか？</summary>
+        <div class="faq-content">はい、可能です。本名は本部のみが管理し、依頼者には公開しません。芸名・屋号でプロフィールを作成いただけます。</div>
+      </details>
+      <details class="faq-item">
+        <summary>他の占いサイト・SNSと並行して活動できますか？</summary>
+        <div class="faq-content">原則OKです。ただし、願い灯マッチング経由で獲得した顧客を、無断で他プラットフォームに誘導する行為は規約違反となります。</div>
+      </details>
+      <details class="faq-item">
+        <summary>悪質なお客様への対応は？</summary>
+        <div class="faq-content">本部が運営として介入します。セクハラ・過度なクレーム・規約違反の依頼者は強制退会となります。占い師の保護を最優先します。</div>
+      </details>
+      <details class="faq-item">
+        <summary>採用されない場合の連絡は？</summary>
+        <div class="faq-content">不採用の場合もLINEまたはメールで必ずご連絡します。応募から面接結果まで通常2週間以内です。</div>
+      </details>
+      <details class="faq-item">
+        <summary>外国語対応は必須ですか？</summary>
+        <div class="faq-content">必須ではありません。日本語のみでも問題なく稼働可能です。外国語ができる方は単価アップ・指名増のチャンスがあります。</div>
+      </details>
+      <details class="faq-item">
+        <summary>「霊感商法は禁止」とありますが、霊感占いはNGですか？</summary>
+        <div class="faq-content">霊感を用いた占い自体は問題ありません。NG行為は「高額な開運グッズ販売」「先祖の供養を強要」「不安を煽る追加販売」等のいわゆる霊感商法的なものです。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Apply CTA -->
+<section class="apply-cta" id="apply">
+  <h2>応募はこちらから</h2>
+  <p>
+    まずは LINE で友だち追加 → 「占い師希望」とメッセージください。<br>
+    応募フォームの URL を自動返信でお送りします。
+  </p>
+  <div class="apply-steps">
+    <span class="step">① LINE友達追加</span>
+    <span class="arrow">→</span>
+    <span class="step">② フォーム記入</span>
+    <span class="arrow">→</span>
+    <span class="step">③ 面接（オンライン）</span>
+    <span class="arrow">→</span>
+    <span class="step">④ 採用・契約</span>
+    <span class="arrow">→</span>
+    <span class="step">⑤ 稼働開始</span>
+  </div>
+  <div class="hero-cta">
+    <a href="https://lin.ee/sG9BELl" target="_blank" rel="noopener" class="btn btn-line">📱 LINEで応募する</a>
+    <a href="mailto:hdxrope@gmail.com?subject=占い師応募&body=お名前：%0A連絡先：%0A占術：%0A経験年数：%0A自己PR：%0A" class="btn btn-ghost">📧 メールで応募</a>
+  </div>
+</section>
+
+<footer>
+  <div>願い灯マッチング 占い師募集 / © 2026 株式会社美高商事</div>
+  <div class="footer-links">
+    <a href="index.html">トップ</a>|
+    <a href="overview.html">事業概要</a>|
+    <a href="fc.html">FC募集</a>|
+    <a href="mailto:hdxrope@gmail.com">お問い合わせ</a>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+</body>
+</html>
