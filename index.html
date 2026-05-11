@@ -362,6 +362,44 @@ nav a:hover {
   background: #05b34c;
 }
 
+.btn-trial {
+  background: linear-gradient(135deg, #c9a34e, #f0d68a);
+  color: #1a1a2e;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(201,163,78,0.35);
+}
+
+.btn-trial::before {
+  content: "🔮";
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+.btn-trial:hover {
+  background: linear-gradient(135deg, #f0d68a, #c9a34e);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(201,163,78,0.5);
+}
+
+.btn-trial .free-badge {
+  background: #ef4444;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 99px;
+  margin-left: 6px;
+  letter-spacing: 0.05em;
+  animation: pulseBadge 1.8s ease-in-out infinite;
+}
+
+@keyframes pulseBadge {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
 /* Section */
 section {
   position: relative;
@@ -897,6 +935,10 @@ footer {
       より深く、より正確に、あなたの可能性を読み解く
     </p>
     <div class="hero-cta">
+      <a href="https://uranai.er-biru.net/" target="_blank" rel="noopener" class="btn btn-trial">
+        <span data-i18n="hero.cta.trial">無料体験できます</span>
+        <span class="free-badge" data-i18n="hero.cta.free">FREE</span>
+      </a>
       <a href="https://lin.ee/sG9BELl" target="_blank" rel="noopener" class="btn btn-line" data-i18n="hero.cta.line">LINEで予約</a>
     </div>
   </div>
