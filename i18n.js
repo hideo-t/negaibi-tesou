@@ -62,6 +62,15 @@
       "ov.title":"事業概要","ov.h1":"事業概要",
       // FC加盟店 (fc.html)
       "fc.title":"FC加盟店募集","fc.h1":"FC加盟店 募集",
+      // 店舗案内 (shop.html)
+      "shop.h1":"和の静寂に、未来を読む。",
+      "shop.sub":"— 南湖公園の杜に佇む、手相診断所 —",
+      "shop.sec1.title":"鑑定の間","shop.sec2.title":"待合の間",
+      "shop.sec3.title":"お守り・お土産","shop.sec4.title":"願い灯の灯",
+      "shop.access.title":"アクセス",
+      "shop.cta.title":"お会いできる日を、お待ちしています。",
+      "shop.cta.map":"地図を見る",
+      "nav.shop":"🏪 店舗案内",
     },
 
     en: {
@@ -106,6 +115,14 @@
       "common.ja_only":"※ Detailed information on this page is currently available in Japanese only.",
       "ov.title":"Business Overview","ov.h1":"Business Overview",
       "fc.title":"Franchise Opportunities","fc.h1":"Franchise Opportunities",
+      "shop.h1":"Read your future in tranquil Japanese serenity.",
+      "shop.sub":"— A palm reading salon by Nanko Park —",
+      "shop.sec1.title":"Reading Room","shop.sec2.title":"Waiting Area",
+      "shop.sec3.title":"Charms & Souvenirs","shop.sec4.title":"The Light of NEGAIBI",
+      "shop.access.title":"Access",
+      "shop.cta.title":"We look forward to seeing you.",
+      "shop.cta.map":"View Map",
+      "nav.shop":"🏪 Shop Guide",
     },
 
     "zh-TW": {
@@ -150,6 +167,14 @@
       "common.ja_only":"※ 本頁詳細內容目前僅提供日文版本。",
       "ov.title":"事業概要","ov.h1":"事業概要",
       "fc.title":"加盟招募","fc.h1":"FC加盟店 招募",
+      "shop.h1":"在和風寧靜中，閱讀您的未來。",
+      "shop.sub":"— 佇立於南湖公園的手相鑑定所 —",
+      "shop.sec1.title":"鑑定室","shop.sec2.title":"等候區",
+      "shop.sec3.title":"護身符・伴手禮","shop.sec4.title":"願燈之光",
+      "shop.access.title":"交通",
+      "shop.cta.title":"期待與您相見的日子。",
+      "shop.cta.map":"查看地圖",
+      "nav.shop":"🏪 店舗導覽",
     },
 
     "zh-CN": {
@@ -194,6 +219,14 @@
       "common.ja_only":"※ 本页详细内容目前仅提供日文版本。",
       "ov.title":"事业概要","ov.h1":"事业概要",
       "fc.title":"加盟招募","fc.h1":"FC加盟店 招募",
+      "shop.h1":"在和风宁静中，阅读您的未来。",
+      "shop.sub":"— 伫立于南湖公园的手相鉴定所 —",
+      "shop.sec1.title":"鉴定室","shop.sec2.title":"等候区",
+      "shop.sec3.title":"护身符・伴手礼","shop.sec4.title":"愿灯之光",
+      "shop.access.title":"交通",
+      "shop.cta.title":"期待与您相见的日子。",
+      "shop.cta.map":"查看地图",
+      "nav.shop":"🏪 店舗导览",
     },
 
     ko: {
@@ -238,6 +271,14 @@
       "common.ja_only":"※ 이 페이지의 자세한 내용은 일본어로만 제공됩니다.",
       "ov.title":"사업 개요","ov.h1":"사업 개요",
       "fc.title":"가맹점 모집","fc.h1":"FC 가맹점 모집",
+      "shop.h1":"고요한 일본의 정취 속에서, 미래를 읽다.",
+      "shop.sub":"— 난코공원 옆에 자리한 손금감정원 —",
+      "shop.sec1.title":"감정실","shop.sec2.title":"대기 공간",
+      "shop.sec3.title":"부적・기념품","shop.sec4.title":"네가이비의 등불",
+      "shop.access.title":"오시는 길",
+      "shop.cta.title":"뵙는 날을 기다리고 있습니다.",
+      "shop.cta.map":"지도 보기",
+      "nav.shop":"🏪 매장 안내",
     },
   };
 

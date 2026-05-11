@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>店舗案内 | 願い灯 世界王手相診断所</title>
+<meta name="description" content="福島県白河市・南湖公園そばの願い灯（NEGAIBI）店舗案内。和の落ち着いた空間で手相診断・パワーストーン・お土産も。">
+<meta property="og:title" content="店舗案内 | 願い灯">
+<meta property="og:description" content="南湖公園の静寂に佇む、和の手相診断所。">
+<meta property="og:image" content="https://hideo-t.github.io/negaibi-tesou/shop/02_room.jpg">
+<link rel="alternate" hreflang="ja" href="./shop.html">
+<link rel="alternate" hreflang="en" href="./shop.html?lang=en">
+<link rel="alternate" hreflang="zh-TW" href="./shop.html?lang=zh-TW">
+<link rel="alternate" hreflang="zh-CN" href="./shop.html?lang=zh-CN">
+<link rel="alternate" hreflang="ko" href="./shop.html?lang=ko">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --navy-light: #152238;
+  --navy-mid: #1a2d4a;
+  --gold: #c9a34e;
+  --gold-light: #f0d68a;
+  --gold-pale: #ede0c4;
+  --silver: #c0c8d4;
+  --silver-light: #e8ecf2;
+  --accent: #6b8cae;
+  --white: #ffffff;
+  --text: #d0d6e0;
+  --text-muted: #8a94a6;
+  --serif: "Noto Serif JP", serif;
+  --sans: "Noto Sans JP", sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans); font-weight: 300;
+  color: var(--text); background: var(--navy);
+  line-height: 1.9; letter-spacing: 0.02em;
+}
+
+/* Header */
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 22, 40, 0.92);
+  backdrop-filter: blur(20px);
+  padding: 14px 28px;
+  border-bottom: 1px solid rgba(192,200,212,0.1);
+}
+.header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--white); }
+.logo-img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 1px solid rgba(192,200,212,0.25); }
+.logo-text { display: flex; flex-direction: column; }
+.logo-main { font-family: var(--serif); font-size: 12px; letter-spacing: 0.15em; color: var(--gold-light); }
+.logo-sub { font-size: 10px; letter-spacing: 0.2em; color: var(--text-muted); }
+.back-link { color: var(--text-muted); font-size: 13px; text-decoration: none; transition: color .2s; }
+.back-link:hover { color: var(--gold-light); }
+
+/* Hero with main image */
+.shop-hero {
+  position: relative;
+  padding-top: 70px;
+  min-height: 90vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.shop-hero::before {
+  content: ""; position: absolute; inset: 0;
+  background: url('shop/02_room.jpg') center/cover;
+  filter: brightness(0.55) saturate(1.15);
+  z-index: 0;
+}
+.shop-hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,22,40,0.3) 0%, rgba(10,22,40,0.85) 100%);
+  z-index: 1;
+}
+.shop-hero-inner {
+  position: relative; z-index: 2;
+  max-width: 760px; text-align: center;
+  padding: 80px 24px;
+}
+.shop-hero-label {
+  display: inline-block; font-family: var(--serif);
+  font-size: 12px; letter-spacing: 0.4em;
+  color: var(--gold-light); margin-bottom: 20px;
+  padding: 5px 16px; border: 1px solid rgba(240,214,138,0.5);
+}
+.shop-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(34px, 6vw, 58px);
+  font-weight: 500; letter-spacing: 0.1em;
+  color: var(--white);
+  margin-bottom: 18px; line-height: 1.4;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+.shop-hero-sub {
+  font-family: var(--serif); font-size: 16px;
+  color: var(--gold-pale); letter-spacing: 0.12em;
+  margin-bottom: 26px;
+}
+.shop-hero-lead {
+  font-size: 14px; color: var(--silver);
+  line-height: 2.1; max-width: 580px; margin: 0 auto;
+}
+
+/* Section base */
+section { padding: 90px 24px; position: relative; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-label { font-family: var(--serif); font-size: 11px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 12px; }
+.section-title {
+  font-family: var(--serif); font-size: clamp(26px, 4vw, 36px);
+  font-weight: 500; color: var(--white); letter-spacing: 0.06em; margin-bottom: 14px;
+}
+.section-desc {
+  max-width: 640px; margin: 0 auto; font-size: 13.5px;
+  color: var(--silver); line-height: 2.05;
+}
+
+/* Magazine layout */
+.mag-row {
+  display: grid; gap: 28px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.mag-row.reverse { direction: rtl; }
+.mag-row.reverse > * { direction: ltr; }
+.mag-row.single { grid-template-columns: 1fr; }
+
+.mag-pic {
+  position: relative;
+  border-radius: 6px; overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  cursor: zoom-in;
+  background: var(--navy-light);
+  aspect-ratio: 4/3;
+}
+.mag-pic img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s ease;
+  display: block;
+}
+.mag-pic:hover img { transform: scale(1.04); }
+.mag-pic-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.7));
+  padding: 28px 18px 14px;
+  font-family: var(--serif); font-size: 12px; color: var(--gold-pale);
+  letter-spacing: 0.1em;
+}
+
+.mag-text { padding: 20px 6px; }
+.mag-text .pillar {
+  display: inline-block; font-family: var(--serif);
+  font-size: 10px; letter-spacing: 0.4em; color: var(--gold);
+  margin-bottom: 12px;
+}
+.mag-text h3 {
+  font-family: var(--serif);
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 500; color: var(--white);
+  margin-bottom: 18px; letter-spacing: 0.06em; line-height: 1.5;
+}
+.mag-text p {
+  font-size: 14px; color: var(--silver);
+  line-height: 2.05; margin-bottom: 12px;
+}
+.mag-text .tag-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.mag-text .tag {
+  font-size: 11px; padding: 4px 10px; border-radius: 99px;
+  background: rgba(201,163,78,0.12); border: 1px solid rgba(201,163,78,0.3);
+  color: var(--gold-light); letter-spacing: 0.05em;
+}
+
+/* Gallery grid */
+.gallery {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  margin-top: 40px;
+}
+.gal-item {
+  position: relative; border-radius: 6px; overflow: hidden;
+  aspect-ratio: 4/3; cursor: zoom-in;
+  background: var(--navy-light);
+}
+.gal-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s, filter 0.3s;
+  display: block;
+}
+.gal-item:hover img { transform: scale(1.06); filter: brightness(1.05); }
+.gal-item .gal-cap {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.75));
+  padding: 22px 14px 10px;
+  font-family: var(--serif); font-size: 11.5px; color: var(--gold-pale);
+  letter-spacing: 0.1em;
+  opacity: 0; transition: opacity 0.3s;
+}
+.gal-item:hover .gal-cap { opacity: 1; }
+
+/* Info block */
+.info-grid {
+  display: grid; gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 36px;
+}
+.info-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,163,78,0.2);
+  border-radius: 6px;
+  padding: 22px 20px;
+  text-align: center;
+}
+.info-card .ic { font-size: 26px; margin-bottom: 8px; display: block; }
+.info-card h4 { font-family: var(--serif); font-size: 13px; color: var(--gold-light); letter-spacing: 0.1em; margin-bottom: 8px; }
+.info-card p { font-size: 13px; color: var(--white); line-height: 1.8; }
+.info-card .sub { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+
+/* CTA */
+.shop-cta {
+  background: linear-gradient(135deg, rgba(201,163,78,0.12), rgba(107,140,174,0.06));
+  padding: 80px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(201,163,78,0.2);
+}
+.shop-cta h2 { font-family: var(--serif); font-size: 28px; color: var(--white); margin-bottom: 12px; letter-spacing: 0.05em; }
+.shop-cta p { font-size: 14px; color: var(--silver); margin-bottom: 28px; max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.9; }
+.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 30px; border-radius: 2px;
+  font-size: 13px; font-weight: 500; text-decoration: none;
+  letter-spacing: 0.1em; transition: all 0.3s;
+}
+.btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy); font-weight: 700; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,163,78,0.4); }
+.btn-line { background: #06C755; color: var(--white); }
+.btn-line:hover { background: #05b34c; }
+.btn-ghost { background: transparent; color: var(--gold-light); border: 1px solid rgba(201,163,78,0.4); }
+.btn-ghost:hover { background: rgba(201,163,78,0.1); }
+
+/* Footer */
+footer {
+  padding: 40px 24px; text-align: center;
+  color: var(--text-muted); font-size: 12px;
+  border-top: 1px solid rgba(192,200,212,0.08);
+}
+footer .footer-links { margin-top: 8px; }
+footer .footer-links a { color: var(--text-muted); text-decoration: none; margin: 0 8px; }
+footer .footer-links a:hover { color: var(--gold-light); }
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.92);
+  align-items: center; justify-content: center;
+  padding: 30px;
+  cursor: zoom-out;
+}
+#lightbox.open { display: flex; }
+#lightbox img {
+  max-width: 100%; max-height: 90vh;
+  object-fit: contain; border-radius: 4px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+#lightbox-close {
+  position: absolute; top: 18px; right: 24px;
+  background: transparent; border: 1px solid rgba(255,255,255,0.3);
+  color: #fff; cursor: pointer; padding: 6px 14px;
+  font-size: 13px; border-radius: 4px;
+  font-family: var(--sans);
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .mag-row { grid-template-columns: 1fr; gap: 18px; margin-bottom: 40px; }
+  .mag-row.reverse { direction: ltr; }
+  section { padding: 60px 18px; }
+  .shop-hero { min-height: 70vh; }
+}
+
+/* 言語スイッチャー */
+.i18n-switch{position:fixed;bottom:18px;right:18px;z-index:200;display:flex;flex-wrap:wrap;gap:4px;background:rgba(10,22,40,.92);border:1px solid rgba(192,200,212,.25);border-radius:99px;padding:5px;backdrop-filter:blur(12px);box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.i18n-switch button{background:transparent;color:#c0c8d4;border:0;cursor:pointer;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.04em;padding:6px 11px;border-radius:99px;transition:all .15s}
+.i18n-switch button:hover{background:rgba(192,200,212,.12);color:#fff}
+.i18n-switch button.active{background:linear-gradient(135deg,#6b8cae,#8aa8c7);color:#fff;font-weight:600}
+@media(max-width:600px){.i18n-switch{bottom:12px;right:12px;padding:4px;gap:2px}.i18n-switch button{font-size:10px;padding:5px 8px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="願い灯" class="logo-img">
+      <div class="logo-text">
+        <span class="logo-main" data-i18n="logo.main">世界王 手相診断所</span>
+        <span class="logo-sub" data-i18n="logo.sub">願い灯 NEGAIBI</span>
+      </div>
+    </a>
+    <a href="index.html" class="back-link" data-i18n="common.back">← トップに戻る</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="shop-hero">
+  <div class="shop-hero-inner">
+    <span class="shop-hero-label">SHOP GUIDE</span>
+    <h1 data-i18n="shop.h1">和の静寂に、未来を読む。</h1>
+    <p class="shop-hero-sub" data-i18n="shop.sub">— 南湖公園の杜に佇む、手相診断所 —</p>
+    <p class="shop-hero-lead" data-i18n="shop.lead">
+      畳と障子、ろうそくの灯。古来の意匠を残した一室で、<br>
+      手相と AI が、あなたの可能性を静かに照らします。
+    </p>
+  </div>
+</section>
+
+<!-- 鑑定スペース -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">READING ROOM</p>
+      <h2 class="section-title" data-i18n="shop.sec1.title">鑑定の間</h2>
+      <p class="section-desc" data-i18n="shop.sec1.desc">
+        和の意匠とモダンが融合した、落ち着いた畳の間。低座の鑑定台で、<br>
+        じっくりとあなたの手相と向き合います。
+      </p>
+    </div>
+
+    <div class="mag-row">
+      <div class="mag-pic" onclick="openLB('shop/02_room.jpg')">
+        <img src="shop/02_room.jpg" alt="鑑定の間 全景">
+        <div class="mag-pic-caption" data-i18n="shop.cap.room">畳の間 — 障子越しのやわらかな光</div>
+      </div>
+      <div class="mag-text">
+        <span class="pillar">01 / READING ROOM</span>
+        <h3 data-i18n="shop.r1.h">畳と障子に包まれて</h3>
+        <p data-i18n="shop.r1.p">
+          畳の柔らかさ、障子から差し込む光、ろうそくの揺らめき。
+          現代の喧騒から離れ、自分自身と向き合う静かな時間。
+          鑑定中の写真撮影もご自由にどうぞ（外光調整可）。
+        </p>
+        <div class="tag-row">
+          <span class="tag">畳の和室</span>
+          <span class="tag">完全個室</span>
+          <span class="tag">写真OK</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mag-row reverse">
+      <div class="mag-pic" onclick="openLB('shop/01_table.jpg')">
+        <img src="shop/01_table.jpg" alt="鑑定台">
+        <div class="mag-pic-caption" data-i18n="shop.cap.table">鑑定台 — 灯りに照らされた手相</div>
+      </div>
+      <div class="mag-text">
+        <span class="pillar">02 / READING DESK</span>
+        <h3 data-i18n="shop.r2.h">あなたの手を、灯りで照らす</h3>
+        <p data-i18n="shop.r2.p">
+          スタンドライトの柔らかな光のもと、お手のひらを撮影。
+          AI が線一本一本を解析し、占い師が深掘りで読み解きます。
+          鑑定書・料金表もこちらに。LINE 友だち追加で次回特典も。
+        </p>
+        <div class="tag-row">
+          <span class="tag">AI画像解析</span>
+          <span class="tag">紋章生成</span>
+          <span class="tag">LINE特典</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mag-row">
+      <div class="mag-pic" onclick="openLB('shop/05_overview.jpg')">
+        <img src="shop/05_overview.jpg" alt="店内俯瞰">
+        <div class="mag-pic-caption" data-i18n="shop.cap.overview">店内俯瞰 — 神秘と和の融合</div>
+      </div>
+      <div class="mag-text">
+        <span class="pillar">03 / INTERIOR</span>
+        <h3 data-i18n="shop.r3.h">象徴に満ちた空間</h3>
+        <p data-i18n="shop.r3.p">
+          鹿の頭、エジプト風の置物、ヴィーナス像、認定証 ——
+          世界各地の象徴をしつらえた、ここにしかない室礼。
+          ふと目を留めるたび、新しい発見があるはずです。
+        </p>
+        <div class="tag-row">
+          <span class="tag">和洋折衷</span>
+          <span class="tag">こだわりの内装</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 待合スペース -->
+<section style="background:rgba(255,255,255,0.015)">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">WAITING SPACE</p>
+      <h2 class="section-title" data-i18n="shop.sec2.title">待合の間</h2>
+      <p class="section-desc" data-i18n="shop.sec2.desc">
+        鑑定前後のひととき。和の佇まいの中で、ゆっくりとお過ごしください。
+      </p>
+    </div>
+
+    <div class="mag-row reverse">
+      <div class="mag-pic" onclick="openLB('shop/07_waiting.jpg')">
+        <img src="shop/07_waiting.jpg" alt="待合スペース">
+        <div class="mag-pic-caption" data-i18n="shop.cap.waiting">待合 — 木のぬくもりと石庭</div>
+      </div>
+      <div class="mag-text">
+        <span class="pillar">04 / WAITING</span>
+        <h3 data-i18n="shop.r4.h">木のぬくもり、石庭の風情</h3>
+        <p data-i18n="shop.r4.p">
+          竹のベンチ、丸い座布団、足元の石。
+          障子越しに差し込む光が、心を整える助けになります。
+          連れ立ってお越しの方は、こちらでお待ちいただけます。
+        </p>
+        <div class="tag-row">
+          <span class="tag">竹のベンチ</span>
+          <span class="tag">石庭</span>
+          <span class="tag">障子の灯</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- お土産・パワーストーン -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">SOUVENIR & POWER STONE</p>
+      <h2 class="section-title" data-i18n="shop.sec3.title">お守り・お土産</h2>
+      <p class="section-desc" data-i18n="shop.sec3.desc">
+        鑑定の余韻を持ち帰っていただける、手仕事のパワーストーンや
+        お清めの塩、アクセサリーなど。お一人おひとりに合う一品をお選びください。
+      </p>
+    </div>
+
+    <div class="gallery">
+      <div class="gal-item" onclick="openLB('shop/10_bracelets.jpg')">
+        <img src="shop/10_bracelets.jpg" alt="パワーストーン ブレスレット">
+        <div class="gal-cap" data-i18n="shop.cap.bracelets">パワーストーン ブレスレット</div>
+      </div>
+      <div class="gal-item" onclick="openLB('shop/04_omiyage_display.jpg')">
+        <img src="shop/04_omiyage_display.jpg" alt="お土産コーナー全景">
+        <div class="gal-cap" data-i18n="shop.cap.omiyage">お土産コーナー</div>
+      </div>
+      <div class="gal-item" onclick="openLB('shop/08_powerstone_pop.jpg')">
+        <img src="shop/08_powerstone_pop.jpg" alt="パワーストーン">
+        <div class="gal-cap" data-i18n="shop.cap.powerstone">運気UP パワーストーン</div>
+      </div>
+      <div class="gal-item" onclick="openLB('shop/09_earrings.jpg')">
+        <img src="shop/09_earrings.jpg" alt="イヤリング">
+        <div class="gal-cap" data-i18n="shop.cap.earrings">手作りイヤリング</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 願い灯の象徴 + FC認定 -->
+<section style="background:rgba(255,255,255,0.015)">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">SYMBOL & NETWORK</p>
+      <h2 class="section-title" data-i18n="shop.sec4.title">願い灯の灯</h2>
+    </div>
+
+    <div class="mag-row">
+      <div class="mag-pic" onclick="openLB('shop/03_logo_mask.jpg')">
+        <img src="shop/03_logo_mask.jpg" alt="願い灯の象徴">
+        <div class="mag-pic-caption" data-i18n="shop.cap.symbol">願い灯 — 一灯を掲げて</div>
+      </div>
+      <div class="mag-text">
+        <span class="pillar">05 / SYMBOL</span>
+        <h3 data-i18n="shop.r5.h">一灯を、心に。</h3>
+        <p data-i18n="shop.r5.p">
+          「願い灯」の名は、暗い夜道を一灯が照らすように、
+          手相が人生の指針となってほしい、という願いから。
+          黒のレースマスクと宝石のしつらえは、神秘性と高貴さの象徴です。
+        </p>
+      </div>
+    </div>
+
+    <div class="mag-row reverse">
+      <div class="mag-pic" onclick="openLB('shop/06_fc_cert.jpg')">
+        <img src="shop/06_fc_cert.jpg" alt="FC加盟認定証">
+        <div class="mag-pic-caption" data-i18n="shop.cap.fc">FC加盟認定証</div>
+      </div>
+      <div class="mag-text">
+        <span class="pillar">06 / FRANCHISE</span>
+        <h3 data-i18n="shop.r6.h">広がる、願い灯の灯</h3>
+        <p data-i18n="shop.r6.p">
+          願い灯はフランチャイズ展開を進めています。
+          全国・海外の協力店舗とともに「一灯を掲げる場所」を増やし、
+          より多くの方の人生に光を届けるネットワークを築いています。
+        </p>
+        <div class="tag-row">
+          <a class="tag" href="fc.html" style="text-decoration:none">→ FC募集</a>
+          <a class="tag" href="teller_recruit.html" style="text-decoration:none">→ 占い師募集</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">ACCESS</p>
+      <h2 class="section-title" data-i18n="shop.access.title">アクセス</h2>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="ic">📍</span>
+        <h4 data-i18n="access.addr">住所</h4>
+        <p data-i18n="access.addr.value">〒961-0815<br>福島県白河市五郎窪38-1<br>南湖神社社務所そば</p>
+      </div>
+      <div class="info-card">
+        <span class="ic">⏰</span>
+        <h4 data-i18n="access.hours">営業時間</h4>
+        <p data-i18n="access.hours.value">10:30〜（予約優先）</p>
+        <div class="sub" data-i18n="shop.access.hours_sub">飛び込みも空きがあれば受付</div>
+      </div>
+      <div class="info-card">
+        <span class="ic">🚫</span>
+        <h4 data-i18n="access.closed">定休日</h4>
+        <p data-i18n="access.closed.value">水曜日</p>
+      </div>
+      <div class="info-card">
+        <span class="ic">💰</span>
+        <h4 data-i18n="price.title">鑑定料</h4>
+        <p>¥500<span style="font-size:11px" data-i18n="price.from">〜</span></p>
+        <div class="sub" data-i18n="price.note">税込</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="shop-cta" id="contact">
+  <h2 data-i18n="shop.cta.title">お会いできる日を、お待ちしています。</h2>
+  <p data-i18n="shop.cta.lead">
+    手相は、人生の地図。<br>
+    ぜひお気軽にお立ち寄りください。
+  </p>
+  <div class="cta-btns">
+    <a href="https://uranai.er-biru.net/" target="_blank" class="btn btn-primary" data-i18n="hero.cta.trial">無料で体験する</a>
+    <a href="https://lin.ee/sG9BELl" target="_blank" class="btn btn-line" data-i18n="hero.cta.line">LINEで予約</a>
+    <a href="index.html#access" class="btn btn-ghost" data-i18n="shop.cta.map">地図を見る</a>
+  </div>
+</section>
+
+<footer>
+  <div>願い灯 NEGAIBI — 福島県白河市 / © 2026 株式会社美高商事</div>
+  <div class="footer-links">
+    <a href="index.html">トップ</a>|
+    <a href="overview.html">事業概要</a>|
+    <a href="fc.html">FC募集</a>|
+    <a href="teller_recruit.html">占い師募集</a>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLB(event)">
+  <button id="lightbox-close" onclick="closeLB(event)">× CLOSE</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="i18n.js"></script>
+<script>
+function openLB(src) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLB(e) {
+  // 画像クリックでも閉じない
+  if (e && e.target && e.target.id === 'lightbox-img') return;
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLB();
+});
+</script>
+</body>
+</html>
