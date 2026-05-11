@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>世界王 手相診断所 願い灯（ねがいび）| 白河市南湖公園</title>
 <meta name="description" content="福島県白河市、南湖公園の自然に囲まれた癒しの空間で手相診断。AI×伝統の手相鑑定。鑑定料500円から。">
+<link rel="alternate" hreflang="ja" href="./index.html">
+<link rel="alternate" hreflang="en" href="./index.html?lang=en">
+<link rel="alternate" hreflang="zh-TW" href="./index.html?lang=zh-TW">
+<link rel="alternate" hreflang="zh-CN" href="./index.html?lang=zh-CN">
+<link rel="alternate" hreflang="ko" href="./index.html?lang=ko">
 <meta property="og:title" content="世界王 手相診断所 願い灯">
 <meta property="og:description" content="その手のひらに、未来を照らす光がある。">
 <meta property="og:type" content="website">
@@ -819,6 +824,26 @@ footer {
     display: none;
   }
 }
+
+/* ===== 言語スイッチャー ===== */
+.i18n-switch{
+  position:fixed;bottom:18px;right:18px;z-index:200;
+  display:flex;flex-wrap:wrap;gap:4px;
+  background:rgba(10,22,40,.92);border:1px solid rgba(192,200,212,.25);
+  border-radius:99px;padding:5px;backdrop-filter:blur(12px);
+  box-shadow:0 4px 16px rgba(0,0,0,.4);
+}
+.i18n-switch button{
+  background:transparent;color:#c0c8d4;border:0;cursor:pointer;
+  font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.04em;
+  padding:6px 11px;border-radius:99px;transition:all .15s;
+}
+.i18n-switch button:hover{background:rgba(192,200,212,.12);color:#fff}
+.i18n-switch button.active{background:linear-gradient(135deg,#6b8cae,#8aa8c7);color:#fff;font-weight:600}
+@media(max-width:600px){
+  .i18n-switch{bottom:12px;right:12px;padding:4px;gap:2px}
+  .i18n-switch button{font-size:10px;padding:5px 8px}
+}
 </style>
 </head>
 <body>
@@ -828,8 +853,8 @@ footer {
     <a href="#" class="logo">
       <img src="logo.jpg" alt="願い灯" class="logo-img">
       <div class="logo-text">
-        <div class="logo-main">世界王 手相診断所</div>
-        <div class="logo-sub">願い灯 NEGAIBI</div>
+        <div class="logo-main" data-i18n="logo.main">世界王 手相診断所</div>
+        <div class="logo-sub" data-i18n="logo.sub">願い灯 NEGAIBI</div>
       </div>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="メニュー">
@@ -837,13 +862,13 @@ footer {
     </button>
     <nav id="nav">
       <ul>
-        <li><a href="overview.html">概要</a></li>
-        <li><a href="#services">鑑定メニュー</a></li>
-        <li><a href="#price">料金</a></li>
-        <li><a href="#access">アクセス</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-        <li><a href="#flyer">フライヤー</a></li>
-        <li><a href="fc.html">FC募集</a></li>
+        <li><a href="overview.html" data-i18n="nav.overview">概要</a></li>
+        <li><a href="#services" data-i18n="nav.services">鑑定メニュー</a></li>
+        <li><a href="#price" data-i18n="nav.price">料金</a></li>
+        <li><a href="#access" data-i18n="nav.access">アクセス</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">お問い合わせ</a></li>
+        <li><a href="#flyer" data-i18n="nav.flyer">フライヤー</a></li>
+        <li><a href="fc.html" data-i18n="nav.fc">FC募集</a></li>
       </ul>
       <div class="nav-sns">
         <a href="https://www.instagram.com/negaibi_sekaio?igsh=MXEybXRvY29wcHByaw==" target="_blank" rel="noopener" aria-label="Instagram">
@@ -863,16 +888,16 @@ footer {
     <div class="hero-slide"></div>
   </div>
   <div class="hero-content">
-    <p class="hero-label">PALM READING × AI</p>
-    <h1>世界王</h1>
-    <p class="hero-ruby">─ 手相診断所 願い灯 ─</p>
-    <p class="hero-catch">その手のひらに、<br>未来を照らす光がある。</p>
-    <p class="hero-sub">
+    <p class="hero-label" data-i18n="hero.label">PALM READING × AI</p>
+    <h1 data-i18n="hero.title">世界王</h1>
+    <p class="hero-ruby" data-i18n="hero.ruby">─ 手相診断所 願い灯 ─</p>
+    <p class="hero-catch" data-i18n="hero.catch">その手のひらに、<br>未来を照らす光がある。</p>
+    <p class="hero-sub" data-i18n="hero.sub">
       伝統の叡智と最先端テクノロジーの融合<br>
       より深く、より正確に、あなたの可能性を読み解く
     </p>
     <div class="hero-cta">
-      <a href="https://lin.ee/sG9BELl" target="_blank" rel="noopener" class="btn btn-line">LINEで予約</a>
+      <a href="https://lin.ee/sG9BELl" target="_blank" rel="noopener" class="btn btn-line" data-i18n="hero.cta.line">LINEで予約</a>
     </div>
   </div>
 </section>
@@ -880,11 +905,9 @@ footer {
 <section class="message">
   <div class="section-inner">
     <p class="message-text">
-      <strong>手相は、人生の地図。</strong><br><br>
-      あなたの手のひらには、<br>
-      これまでの歩みと、これからの可能性が<br>
-      すべて刻まれています。<br><br>
-      <strong>未来は、変えられる。</strong>
+      <strong data-i18n="msg.line1">手相は、人生の地図。</strong><br><br>
+      <span data-i18n="msg.line2">あなたの手のひらには、<br>これまでの歩みと、これからの可能性が<br>すべて刻まれています。</span><br><br>
+      <strong data-i18n="msg.line3">未来は、変えられる。</strong>
     </p>
   </div>
 </section>
@@ -893,38 +916,38 @@ footer {
   <div class="section-inner">
     <div class="section-header">
       <p class="section-label">MENU</p>
-      <h2 class="section-title">鑑定メニュー</h2>
+      <h2 class="section-title" data-i18n="services.title">鑑定メニュー</h2>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-num">01</div>
-        <h3>丁寧な鑑定</h3>
-        <p>お一人おひとりに寄り添い、手相の線一本一本を丁寧に読み解きます。</p>
+        <h3 data-i18n="svc.01.title">丁寧な鑑定</h3>
+        <p data-i18n="svc.01.desc">お一人おひとりに寄り添い、手相の線一本一本を丁寧に読み解きます。</p>
       </div>
       <div class="service-card">
         <div class="service-num">02</div>
-        <h3>恋愛・結婚</h3>
-        <p>相性・結婚の時期など、恋の未来を手相から紐解きます。</p>
+        <h3 data-i18n="svc.02.title">恋愛・結婚</h3>
+        <p data-i18n="svc.02.desc">相性・結婚の時期など、恋の未来を手相から紐解きます。</p>
       </div>
       <div class="service-card">
         <div class="service-num">03</div>
-        <h3>仕事・金運</h3>
-        <p>適職・転機・金運の流れなど、お仕事と財運を鑑定します。</p>
+        <h3 data-i18n="svc.03.title">仕事・金運</h3>
+        <p data-i18n="svc.03.desc">適職・転機・金運の流れなど、お仕事と財運を鑑定します。</p>
       </div>
       <div class="service-card">
         <div class="service-num">04</div>
-        <h3>人間関係</h3>
-        <p>家族・友人・職場の悩みなど、人との関係性を読み解きます。</p>
+        <h3 data-i18n="svc.04.title">人間関係</h3>
+        <p data-i18n="svc.04.desc">家族・友人・職場の悩みなど、人との関係性を読み解きます。</p>
       </div>
       <div class="service-card">
         <div class="service-num">05</div>
-        <h3>癒しの空間</h3>
-        <p>南湖公園の自然に囲まれた空間で、心をリセットできます。</p>
+        <h3 data-i18n="svc.05.title">癒しの空間</h3>
+        <p data-i18n="svc.05.desc">南湖公園の自然に囲まれた空間で、心をリセットできます。</p>
       </div>
       <div class="service-card">
         <div class="service-num">06</div>
-        <h3>手のひら画像診断</h3>
-        <p>写真を送るだけでOK。遠方の方もお気軽にご相談いただけます。</p>
+        <h3 data-i18n="svc.06.title">手のひら画像診断</h3>
+        <p data-i18n="svc.06.desc">写真を送るだけでOK。遠方の方もお気軽にご相談いただけます。</p>
       </div>
     </div>
   </div>
@@ -934,12 +957,12 @@ footer {
   <div class="section-inner">
     <div class="section-header">
       <p class="section-label">PRICE</p>
-      <h2 class="section-title">鑑定料</h2>
+      <h2 class="section-title" data-i18n="price.title">鑑定料</h2>
     </div>
     <div class="price-card">
       <p class="price-label">PALM READING</p>
-      <p class="price-amount"><span>¥</span>500<span>〜</span></p>
-      <p class="price-note">税込</p>
+      <p class="price-amount"><span>¥</span>500<span data-i18n="price.from">〜</span></p>
+      <p class="price-note" data-i18n="price.note">税込</p>
     </div>
   </div>
 </section>
@@ -948,25 +971,25 @@ footer {
   <div class="section-inner">
     <div class="section-header">
       <p class="section-label">ACCESS</p>
-      <h2 class="section-title">アクセス</h2>
+      <h2 class="section-title" data-i18n="access.title">アクセス</h2>
     </div>
     <div class="access-content">
       <div class="access-info">
         <div class="access-row">
-          <span class="access-label">店名</span>
-          <span class="access-value">世界王 手相診断所<br>願い灯（ねがいび）</span>
+          <span class="access-label" data-i18n="access.shop">店名</span>
+          <span class="access-value" data-i18n="access.shop.value">世界王 手相診断所<br>願い灯（ねがいび）</span>
         </div>
         <div class="access-row">
-          <span class="access-label">住所</span>
-          <span class="access-value">〒961-0815<br>福島県白河市五郎窪38-1<br>南湖神社社務所そば</span>
+          <span class="access-label" data-i18n="access.addr">住所</span>
+          <span class="access-value" data-i18n="access.addr.value">〒961-0815<br>福島県白河市五郎窪38-1<br>南湖神社社務所そば</span>
         </div>
         <div class="access-row">
-          <span class="access-label">営業時間</span>
-          <span class="access-value">10:30〜（予約優先）</span>
+          <span class="access-label" data-i18n="access.hours">営業時間</span>
+          <span class="access-value" data-i18n="access.hours.value">10:30〜（予約優先）</span>
         </div>
         <div class="access-row">
-          <span class="access-label">定休日</span>
-          <span class="access-value">水曜日</span>
+          <span class="access-label" data-i18n="access.closed">定休日</span>
+          <span class="access-value" data-i18n="access.closed.value">水曜日</span>
         </div>
       </div>
       <div class="access-map">
@@ -978,7 +1001,7 @@ footer {
 
 <section class="cta" id="contact">
   <div class="section-inner">
-    <h2 class="cta-title">
+    <h2 class="cta-title" data-i18n="cta.title">
       手のひら画像診断<br>
       無料体験 受付中
     </h2>
@@ -992,7 +1015,7 @@ footer {
         LINE
       </a>
     </div>
-    <p class="cta-note">DMにてお気軽にお問い合わせください</p>
+    <p class="cta-note" data-i18n="cta.note">DMにてお気軽にお問い合わせください</p>
   </div>
 </section>
 
@@ -1000,14 +1023,14 @@ footer {
   <div class="section-inner">
     <div class="section-header">
       <p class="section-label">FLYER</p>
-      <h2 class="section-title">フライヤー</h2>
+      <h2 class="section-title" data-i18n="flyer.title">フライヤー</h2>
     </div>
     <div class="flyer-image">
       <img src="flyer.jpg" alt="願い灯 世界王手相診断所 フライヤー">
     </div>
     <a href="flyer.jpg" download="negaibi_flyer.jpg" class="flyer-download">
       <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-      ダウンロード
+      <span data-i18n="flyer.download">ダウンロード</span>
     </a>
   </div>
 </section>
@@ -1016,19 +1039,20 @@ footer {
   <a href="https://hideo-t.github.io/worldkingjapan/" target="_blank" class="worldking-inner">
     <img src="worldking-logo.jpg" alt="世界王" class="worldking-logo">
     <div class="worldking-content">
-      <span class="worldking-label">WORLD KING PROJECT</span>
-      <h3 class="worldking-title">世界王プロジェクト</h3>
-      <p class="worldking-desc">人は、誰でも自分の世界の王になれる。AI診断・物語・ツールが融合したプラットフォーム。</p>
+      <span class="worldking-label" data-i18n="wk.label">WORLD KING PROJECT</span>
+      <h3 class="worldking-title" data-i18n="wk.title">世界王プロジェクト</h3>
+      <p class="worldking-desc" data-i18n="wk.desc">人は、誰でも自分の世界の王になれる。AI診断・物語・ツールが融合したプラットフォーム。</p>
     </div>
     <span class="worldking-arrow">→</span>
   </a>
 </section>
 
 <footer>
-  <div class="footer-logo">願い灯 NEGAIBI</div>
-  <p class="footer-copy">&copy; 2025 世界王 手相診断所</p>
+  <div class="footer-logo" data-i18n="footer.logo">願い灯 NEGAIBI</div>
+  <p class="footer-copy" data-i18n="footer.copy">&copy; 2025 世界王 手相診断所</p>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
 const navToggle = document.getElementById('navToggle');
 const nav = document.getElementById('nav');
