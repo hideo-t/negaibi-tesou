@@ -660,6 +660,111 @@ section {
   margin-top: 30px; flex-wrap: wrap;
 }
 
+/* ===== 美術館ビジュアル ===== */
+.museum-hero {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto 70px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.55),
+              0 0 0 1px rgba(201,163,78,0.18);
+  aspect-ratio: 16/9;
+}
+.museum-hero img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 1.2s ease;
+}
+.museum-hero:hover img { transform: scale(1.03); }
+.museum-hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 60%, rgba(10,22,40,0.85) 100%);
+  pointer-events: none;
+}
+.museum-hero-caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 60px 32px 38px;
+  text-align: center;
+  z-index: 2;
+}
+.museum-hero-caption .ms-label {
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: 10px;
+  letter-spacing: 0.5em;
+  color: var(--gold-light);
+  margin-bottom: 14px;
+  padding: 4px 14px;
+  border: 1px solid rgba(240,214,138,0.5);
+}
+.museum-hero-caption .ms-main {
+  font-family: var(--serif);
+  font-size: clamp(20px, 3.5vw, 32px);
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.6);
+  margin-bottom: 8px;
+}
+.museum-hero-caption .ms-sub {
+  font-family: var(--serif);
+  font-size: 12px;
+  color: var(--gold-pale);
+  letter-spacing: 0.15em;
+  opacity: 0.9;
+}
+
+/* 単独紋章ピース */
+.museum-piece {
+  position: relative;
+  max-width: 720px;
+  margin: 60px auto;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.55),
+              0 0 0 1px rgba(201,163,78,0.2);
+  aspect-ratio: 3/2;
+}
+.museum-piece img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 1.0s ease, filter 0.6s;
+  filter: brightness(0.95);
+}
+.museum-piece:hover img { transform: scale(1.05); filter: brightness(1.05); }
+.museum-piece::after {
+  content: "";
+  position: absolute; inset: 0;
+  border: 1px solid rgba(201,163,78,0.3);
+  pointer-events: none;
+}
+.museum-piece-caption {
+  position: absolute;
+  bottom: 14px; left: 14px;
+  background: rgba(10,22,40,0.85);
+  border: 1px solid rgba(201,163,78,0.4);
+  padding: 10px 16px;
+  font-family: var(--serif);
+  font-size: 11.5px;
+  color: var(--gold-pale);
+  letter-spacing: 0.12em;
+  z-index: 2;
+}
+.museum-piece-caption .mp-no { color: var(--gold-light); font-weight: 600; margin-right: 8px; }
+
+@media (max-width: 600px) {
+  .museum-hero { margin-bottom: 40px; aspect-ratio: 4/3; }
+  .museum-hero-caption { padding: 28px 18px 20px; }
+  .museum-hero-caption .ms-main { font-size: 16px; line-height: 1.6; }
+  .museum-hero-caption .ms-label { font-size: 9px; letter-spacing: 0.3em; }
+  .museum-piece { margin: 40px auto; aspect-ratio: 4/3; }
+  .museum-piece-caption { font-size: 10px; padding: 8px 12px; }
+}
+
 /* 紋章イメージ動画 */
 .emblem-video-wrap {
   position: relative;
@@ -1239,6 +1344,17 @@ footer {
       <p class="section-label">EMBLEM GALLERY</p>
       <h2 class="section-title" data-i18n="emblem.title">世界に一つの、あなたの紋章</h2>
     </div>
+
+    <!-- 美術館ヒーロー写真 -->
+    <div class="museum-hero">
+      <img src="emblems/museum_gallery.jpg" alt="美術館に並ぶ紋章群" loading="lazy">
+      <div class="museum-hero-caption">
+        <span class="ms-label" data-i18n="museum.label">MUSEUM OF EMBLEMS</span>
+        <div class="ms-main" data-i18n="museum.main">まるで、美術館におけるような、<br>あなただけの価値ある紋章</div>
+        <div class="ms-sub" data-i18n="museum.sub">— A masterpiece, born from your hand. —</div>
+      </div>
+    </div>
+
     <div class="emblem-intro">
       <p data-i18n="emblem.intro">
         AI が手相を読み解き、あなただけの「王名」と「紋章」を生成。<br>
@@ -1282,6 +1398,15 @@ footer {
         <img src="emblems/m2_oracle.png" alt="紋章 No.375 霊的直感型" loading="lazy">
         <span class="emblem-tag" data-i18n="emblem.tag.oracle">霊的直感型</span>
       </a>
+    </div>
+
+    <!-- 単独紋章ピース展示 -->
+    <div class="museum-piece" onclick="openEmb('emblems/museum_single.jpg',event)" style="cursor:zoom-in">
+      <img src="emblems/museum_single.jpg" alt="紋章単独展示 No.342" loading="lazy">
+      <div class="museum-piece-caption">
+        <span class="mp-no" data-i18n="museum.piece.no">No.342</span>
+        <span data-i18n="museum.piece.label">— Exhibit Piece —</span>
+      </div>
     </div>
 
     <p class="emblem-tagline" data-i18n="emblem.tagline">
