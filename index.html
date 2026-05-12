@@ -501,6 +501,107 @@ section {
   line-height: 1.9;
 }
 
+/* ===== 紋章ギャラリー ===== */
+.emblem-gallery {
+  background: linear-gradient(180deg, rgba(10,22,40,0.4), rgba(10,22,40,0.85)),
+              radial-gradient(circle at 30% 50%, rgba(201,163,78,0.10), transparent 60%),
+              radial-gradient(circle at 70% 50%, rgba(107,140,174,0.08), transparent 60%),
+              var(--navy);
+  position: relative; overflow: hidden;
+}
+.emblem-gallery::before {
+  content: ""; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='10' cy='10' r='0.8' fill='%23f0d68a' opacity='0.3'/%3E%3Ccircle cx='60' cy='30' r='0.6' fill='%23c9a34e' opacity='0.25'/%3E%3Ccircle cx='30' cy='70' r='1' fill='%23f0d68a' opacity='0.2'/%3E%3C/svg%3E");
+  opacity: 0.6; pointer-events: none;
+}
+.emblem-gallery .section-inner { position: relative; z-index: 1; }
+.emblem-intro {
+  max-width: 640px; margin: 0 auto 50px;
+  text-align: center;
+}
+.emblem-intro p {
+  font-size: 14px; color: var(--silver);
+  line-height: 2.1; letter-spacing: 0.04em;
+}
+.emblem-grid {
+  display: grid; gap: 22px;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1100px; margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .emblem-grid { grid-template-columns: repeat(3, 1fr); max-width: 640px; }
+}
+@media (max-width: 560px) {
+  .emblem-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}
+.emblem-card {
+  position: relative;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,163,78,0.3);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  transition: transform 0.5s, box-shadow 0.4s, border-color 0.4s;
+  cursor: zoom-in;
+}
+.emblem-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 14px 40px rgba(201,163,78,0.4);
+  border-color: var(--gold-light);
+}
+.emblem-card img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.7s, filter 0.4s;
+  display: block;
+  filter: brightness(0.95) saturate(1.05);
+}
+.emblem-card:hover img { transform: scale(1.08); filter: brightness(1.05) saturate(1.15); }
+.emblem-card::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(0,0,0,0.5) 100%);
+  opacity: 0.35; transition: opacity 0.4s;
+  pointer-events: none;
+}
+.emblem-card:hover::after { opacity: 0; }
+.emblem-tag {
+  position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+  background: rgba(10,22,40,0.88);
+  border: 1px solid rgba(201,163,78,0.4);
+  color: var(--gold-light);
+  font-family: var(--serif); font-size: 10px;
+  padding: 3px 10px; border-radius: 99px;
+  letter-spacing: 0.1em; white-space: nowrap;
+  opacity: 0; transition: opacity 0.3s;
+  z-index: 2; pointer-events: none;
+}
+.emblem-card:hover .emblem-tag { opacity: 1; }
+.emblem-tagline {
+  text-align: center; margin-top: 50px;
+  font-family: var(--serif); font-size: 13px;
+  color: var(--gold-pale); letter-spacing: 0.15em;
+  line-height: 2;
+}
+.emblem-cta {
+  display: flex; gap: 14px; justify-content: center;
+  margin-top: 30px; flex-wrap: wrap;
+}
+
+/* 紋章ライトボックス */
+#embLightbox {
+  display: none;
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.94);
+  align-items: center; justify-content: center;
+  padding: 30px; cursor: zoom-out;
+}
+#embLightbox.open { display: flex; }
+#embLightbox img {
+  max-width: 92%; max-height: 88vh;
+  object-fit: contain; border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(201,163,78,0.4);
+}
+
 /* Price */
 .price {
   background: var(--navy);
@@ -903,6 +1004,7 @@ footer {
         <li><a href="overview.html" data-i18n="nav.overview">概要</a></li>
         <li><a href="shop.html" data-i18n="nav.shop">🏪 店舗案内</a></li>
         <li><a href="#services" data-i18n="nav.services">鑑定メニュー</a></li>
+        <li><a href="#emblem" data-i18n="nav.emblem">紋章</a></li>
         <li><a href="#price" data-i18n="nav.price">料金</a></li>
         <li><a href="#access" data-i18n="nav.access">アクセス</a></li>
         <li><a href="#contact" data-i18n="nav.contact">お問い合わせ</a></li>
@@ -999,6 +1101,61 @@ footer {
     </div>
   </div>
 </section>
+
+<!-- ===== 紋章ギャラリー ===== -->
+<section class="emblem-gallery" id="emblem">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">EMBLEM GALLERY</p>
+      <h2 class="section-title" data-i18n="emblem.title">世界に一つの、あなたの紋章</h2>
+    </div>
+    <div class="emblem-intro">
+      <p data-i18n="emblem.intro">
+        AI が手相を読み解き、あなただけの「王名」と「紋章」を生成。<br>
+        過去にお越しになった方々の紋章を、ほんの一部ご紹介します。
+      </p>
+    </div>
+
+    <div class="emblem-grid">
+      <a class="emblem-card" onclick="openEmb('emblems/f1_envoy.png',event)">
+        <img src="emblems/f1_envoy.png" alt="紋章 No.365 神々の使者" loading="lazy">
+        <span class="emblem-tag" data-i18n="emblem.tag.envoy">神々の使者</span>
+      </a>
+      <a class="emblem-card" onclick="openEmb('emblems/f2_ancient.png',event)">
+        <img src="emblems/f2_ancient.png" alt="紋章 No.361 古代の流派" loading="lazy">
+        <span class="emblem-tag" data-i18n="emblem.tag.ancient">古代の流派</span>
+      </a>
+      <a class="emblem-card" onclick="openEmb('emblems/m1_merchant.png',event)">
+        <img src="emblems/m1_merchant.png" alt="紋章 No.378 商人型" loading="lazy">
+        <span class="emblem-tag" data-i18n="emblem.tag.merchant">商人型</span>
+      </a>
+      <a class="emblem-card" onclick="openEmb('emblems/f3_healing.png',event)">
+        <img src="emblems/f3_healing.png" alt="紋章 No.353 癒しの泉" loading="lazy">
+        <span class="emblem-tag" data-i18n="emblem.tag.healing">癒しの泉</span>
+      </a>
+      <a class="emblem-card" onclick="openEmb('emblems/m2_oracle.png',event)">
+        <img src="emblems/m2_oracle.png" alt="紋章 No.375 霊的直感型" loading="lazy">
+        <span class="emblem-tag" data-i18n="emblem.tag.oracle">霊的直感型</span>
+      </a>
+    </div>
+
+    <p class="emblem-tagline" data-i18n="emblem.tagline">
+      ✦ あなたの手相が、あなただけの紋章を生む。 ✦
+    </p>
+    <div class="emblem-cta">
+      <a href="https://uranai.er-biru.net/" target="_blank" class="btn btn-trial">
+        <span data-i18n="hero.cta.trial">無料で体験する</span>
+        <span class="free-badge" data-i18n="hero.cta.free">FREE</span>
+      </a>
+      <a href="https://lin.ee/sG9BELl" target="_blank" class="btn btn-line" data-i18n="hero.cta.line">LINEで予約</a>
+    </div>
+  </div>
+</section>
+
+<!-- 紋章ライトボックス -->
+<div id="embLightbox" onclick="closeEmb(event)">
+  <img id="embLightboxImg" src="" alt="">
+</div>
 
 <section class="price" id="price">
   <div class="section-inner">
@@ -1115,6 +1272,22 @@ nav.querySelectorAll('a[href^="#"]').forEach(link => {
     navToggle.classList.remove('active');
     nav.classList.remove('open');
   });
+});
+
+// 紋章ライトボックス
+function openEmb(src, e) {
+  if (e) e.preventDefault();
+  const lb = document.getElementById('embLightbox');
+  document.getElementById('embLightboxImg').src = src;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeEmb(e) {
+  document.getElementById('embLightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeEmb();
 });
 </script>
 </body>
