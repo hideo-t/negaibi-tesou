@@ -660,6 +660,58 @@ section {
   margin-top: 30px; flex-wrap: wrap;
 }
 
+/* 紋章イメージ動画 */
+.emblem-video-wrap {
+  position: relative;
+  max-width: 880px;
+  margin: 0 auto 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6),
+              0 0 0 1px rgba(201,163,78,0.25);
+  background: #000;
+  aspect-ratio: 16/9;
+}
+.emblem-video-wrap video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.emblem-video-wrap::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 60%, rgba(0,0,0,0.45) 100%);
+  pointer-events: none; z-index: 1;
+}
+.emblem-video-wrap::after {
+  content: "";
+  position: absolute; inset: 0;
+  border: 1px solid rgba(240,214,138,0.25);
+  border-radius: 8px;
+  pointer-events: none; z-index: 2;
+}
+.emblem-video-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.7));
+  padding: 36px 20px 18px;
+  text-align: center;
+  font-family: var(--serif);
+  color: var(--gold-pale);
+  letter-spacing: 0.15em;
+  z-index: 3;
+  font-size: 13px;
+}
+.emblem-video-caption .vc-main {
+  font-size: 15px; color: var(--white);
+  margin-bottom: 6px; font-weight: 500;
+}
+@media (max-width: 600px) {
+  .emblem-video-wrap { margin-bottom: 40px; }
+  .emblem-video-caption .vc-main { font-size: 13px; }
+  .emblem-video-caption { font-size: 11px; padding: 24px 14px 12px; }
+}
+
 /* 紋章ライトボックス */
 #embLightbox {
   display: none;
@@ -1192,6 +1244,21 @@ footer {
         AI が手相を読み解き、あなただけの「王名」と「紋章」を生成。<br>
         過去にお越しになった方々の紋章を、ほんの一部ご紹介します。
       </p>
+    </div>
+
+    <!-- 紋章イメージ動画 -->
+    <div class="emblem-video-wrap">
+      <video
+        autoplay loop muted playsinline preload="metadata"
+        poster="emblems/m1_merchant.png"
+        aria-label="紋章イメージ動画">
+        <source src="video/emblem_intro.mp4" type="video/mp4">
+        お使いのブラウザは動画再生に対応していません。
+      </video>
+      <div class="emblem-video-caption">
+        <div class="vc-main" data-i18n="emblem.video.title">紋章は、あなたの宇宙</div>
+        <div data-i18n="emblem.video.sub">— Your hand. Your cosmos. Your emblem. —</div>
+      </div>
     </div>
 
     <div class="emblem-grid">
