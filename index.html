@@ -1213,6 +1213,48 @@ footer {
   .i18n-switch{bottom:12px;right:12px;padding:4px;gap:2px}
   .i18n-switch button{font-size:10px;padding:5px 8px}
 }
+/* 休業のお知らせ（ヒーロー上部） */
+.hero-notice {
+  max-width: 640px;
+  margin: 0 auto 32px;
+  padding: 22px 26px;
+  background: rgba(10, 18, 34, 0.72);
+  border: 1px solid rgba(192, 200, 212, 0.35);
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  text-align: center;
+  color: var(--text);
+}
+.hero-notice-title {
+  font-family: var(--serif);
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  color: var(--silver-light);
+  margin-bottom: 12px;
+}
+.hero-notice-body {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.hero-notice-period {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.hero-notice-line {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+@media (max-width: 640px) {
+  .hero-notice { margin-bottom: 24px; padding: 18px 18px; }
+  .hero-notice-body { font-size: 12.5px; }
+}
 </style>
 </head>
 <body>
@@ -1265,6 +1307,19 @@ footer {
     <div class="hero-slide"></div>
   </div>
   <div class="hero-content">
+    <div class="hero-notice" role="status" aria-label="休業のお知らせ">
+      <p class="hero-notice-title">【休業のお知らせ】</p>
+      <p class="hero-notice-body">
+        いつも願い灯をご利用いただきありがとうございます。<br>
+        8月上旬より約1ヶ月間、AI診断システムの大幅アップグレード・サービス体制の強化・棚卸のため休業とさせていただきます。
+      </p>
+      <p class="hero-notice-period">休業期間：2026年8月上旬 〜 9月上旬（予定）</p>
+      <p class="hero-notice-body">
+        パワーアップした願い灯にご期待ください。<br>
+        再開時には LINE・Instagram でお知らせいたします。
+      </p>
+      <p class="hero-notice-line">LINE公式：@888nsgkb ／ 願い灯 南湖店</p>
+    </div>
     <p class="hero-label" data-i18n="hero.label">PALM READING × AI</p>
     <h1 data-i18n="hero.title">願い灯</h1>
     <p class="hero-ruby" data-i18n="hero.ruby">─ 世界王 手相診断所 ─</p>
