@@ -28,6 +28,14 @@
       // ロゴ
       "logo.main":"世界王 手相診断所","logo.sub":"願い灯 NEGAIBI",
       // ヒーロー
+
+      // 休業・準備中のお知らせ
+      "notice.title":"【お知らせ】完全予約制に向けて準備中です",
+      "notice.body":"いつも願い灯をご利用いただきありがとうございます。当初は9月上旬の再開を予定しておりましたが、AI診断システムの構築とサービス体制の整備に、いましばらくお時間をいただくこととなりました。",
+      "notice.body2":"より一人ひとりと、ゆっくり向き合える特別な時間をご提供するため、完全予約制に向けて準備を進めております。",
+      "notice.period":"再開日：未定（準備が整い次第、お知らせいたします）",
+      "notice.line":"最新のご案内は LINE・Instagram にて ／ LINE公式：@888nsgkb",
+      "notice.alt":"願い灯 南湖店は完全予約制に向けて準備中です。AIシステムの強化、昭和の記憶再現メニュー、ストーリー冊子プラン、ご予約システムの準備を進めています。",
       "hero.label":"PALM READING × AI",
       "hero.title":"願い灯",
       "hero.ruby":"─ 世界王 手相診断所 ─",
@@ -107,6 +115,14 @@
       "museum.sub":"— A masterpiece, born from your hand. —",
       "museum.piece.no":"No.342","museum.piece.label":"— Exhibit Piece —",
       "logo.main":"World King Palm Reading","logo.sub":"NEGAIBI",
+
+      // 休業・準備中のお知らせ
+      "notice.title":"[Notice] Preparing for reservation-only service",
+      "notice.body":"Thank you for your continued support of Negaibi. We had planned to reopen in early September, but building our AI reading system and preparing our service will take a little longer.",
+      "notice.body2":"We are moving to reservation-only service so that we can give each guest unhurried, personal attention.",
+      "notice.period":"Reopening date: to be announced",
+      "notice.line":"Updates will be posted on LINE and Instagram / LINE: @888nsgkb",
+      "notice.alt":"Negaibi Nanko is preparing for reservation-only service.",
       "hero.label":"PALM READING × AI",
       "hero.title":"NEGAIBI",
       "hero.ruby":"─ World King Palm Reading Salon ─",
@@ -173,6 +189,14 @@
       "museum.sub":"— A masterpiece, born from your hand. —",
       "museum.piece.no":"No.342","museum.piece.label":"— 展示作品 —",
       "logo.main":"世界王 手相鑑定所","logo.sub":"願燈 NEGAIBI",
+
+      // 休業・準備中のお知らせ
+      "notice.title":"【公告】正為完全預約制進行準備",
+      "notice.body":"感謝您一直以來的支持。原訂於9月上旬重新開幕，但AI手相系統的建置與服務體制的整備尚需一些時間。",
+      "notice.body2":"為了能與每一位客人從容相處，我們正朝完全預約制進行準備。",
+      "notice.period":"重新開幕日：未定（準備完成後另行公告）",
+      "notice.line":"最新消息請見 LINE・Instagram ／ LINE官方：@888nsgkb",
+      "notice.alt":"願い灯 南湖店 正為完全預約制進行準備。",
       "hero.label":"PALM READING × AI",
       "hero.title":"願燈",
       "hero.ruby":"─ 世界王 手相鑑定所 ─",
@@ -239,6 +263,14 @@
       "museum.sub":"— A masterpiece, born from your hand. —",
       "museum.piece.no":"No.342","museum.piece.label":"— 展示作品 —",
       "logo.main":"世界王 手相鉴定所","logo.sub":"愿灯 NEGAIBI",
+
+      // 休業・準備中のお知らせ
+      "notice.title":"【公告】正为完全预约制进行准备",
+      "notice.body":"感谢您一直以来的支持。原定于9月上旬重新开业，但AI手相系统的搭建与服务体制的整备还需要一些时间。",
+      "notice.body2":"为了能与每一位客人从容相处，我们正朝完全预约制进行准备。",
+      "notice.period":"重新开业日：待定（准备就绪后另行通知）",
+      "notice.line":"最新消息请见 LINE・Instagram ／ LINE官方：@888nsgkb",
+      "notice.alt":"願い灯 南湖店 正为完全预约制进行准备。",
       "hero.label":"PALM READING × AI",
       "hero.title":"愿灯",
       "hero.ruby":"─ 世界王 手相鉴定所 ─",
@@ -305,6 +337,14 @@
       "museum.sub":"— A masterpiece, born from your hand. —",
       "museum.piece.no":"No.342","museum.piece.label":"— 전시 작품 —",
       "logo.main":"세계왕 손금감정원","logo.sub":"네가이비 NEGAIBI",
+
+      // 休業・準備中のお知らせ
+      "notice.title":"【안내】완전 예약제를 준비하고 있습니다",
+      "notice.body":"늘 네가이비를 이용해 주셔서 감사합니다. 당초 9월 초 재개를 예정하고 있었으나, AI 손금 시스템 구축과 서비스 체제 정비에 조금 더 시간이 필요하게 되었습니다.",
+      "notice.body2":"한 분 한 분과 여유롭게 마주할 수 있는 시간을 마련하고자, 완전 예약제를 준비하고 있습니다.",
+      "notice.period":"재개일: 미정 (준비되는 대로 안내드리겠습니다)",
+      "notice.line":"최신 안내는 LINE・Instagram 에서 / LINE 공식: @888nsgkb",
+      "notice.alt":"네가이비 난코점은 완전 예약제를 준비하고 있습니다.",
       "hero.label":"PALM READING × AI",
       "hero.title":"네가이비",
       "hero.ruby":"─ 세계왕 손금감정원 ─",

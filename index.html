@@ -1213,11 +1213,26 @@ footer {
   .i18n-switch{bottom:12px;right:12px;padding:4px;gap:2px}
   .i18n-switch button{font-size:10px;padding:5px 8px}
 }
-/* 休業のお知らせ（ヒーロー上部） */
+/* お知らせ（ヒーロー上部）
+   告知画像そのものが完成した案内なので、画像を主役に置く。
+   下のテキストは多言語切替・読み上げ・検索のために残している
+   （画像内の文字は日本語のみで、それらに拾われないため）。 */
+.hero-notice-figure {
+  display: block;
+  margin: 0 0 20px;
+  line-height: 0;
+}
+.hero-notice-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.5);
+}
 .hero-notice {
-  max-width: 640px;
+  max-width: 620px;
   margin: 0 auto 32px;
-  padding: 22px 26px;
+  padding: 18px 18px 22px;
   background: rgba(10, 18, 34, 0.72);
   border: 1px solid rgba(192, 200, 212, 0.35);
   border-radius: 4px;
@@ -1252,7 +1267,8 @@ footer {
   margin-top: 4px;
 }
 @media (max-width: 640px) {
-  .hero-notice { margin-bottom: 24px; padding: 18px 18px; }
+  .hero-notice { margin-bottom: 24px; padding: 14px 14px 18px; }
+  .hero-notice-figure { margin-bottom: 16px; }
   .hero-notice-body { font-size: 12.5px; }
 }
 </style>
@@ -1307,18 +1323,34 @@ footer {
     <div class="hero-slide"></div>
   </div>
   <div class="hero-content">
-    <div class="hero-notice" role="status" aria-label="休業のお知らせ">
-      <p class="hero-notice-title">【休業のお知らせ】</p>
-      <p class="hero-notice-body">
-        いつも願い灯をご利用いただきありがとうございます。<br>
-        8月上旬より約1ヶ月間、AI診断システムの大幅アップグレード・サービス体制の強化・棚卸のため休業とさせていただきます。
+    <div class="hero-notice" role="status">
+      <a class="hero-notice-figure"
+         href="notice/negaibi_notice_2026-09.jpg" target="_blank" rel="noopener"
+         data-i18n-attr="aria-label:notice.alt">
+        <picture>
+          <source type="image/webp"
+                  srcset="notice/negaibi_notice_2026-09@640.webp 640w,
+                          notice/negaibi_notice_2026-09.webp 1080w"
+                  sizes="(max-width:640px) 86vw, 560px">
+          <img src="notice/negaibi_notice_2026-09.jpg"
+               srcset="notice/negaibi_notice_2026-09@640.jpg 640w,
+                       notice/negaibi_notice_2026-09.jpg 1080w"
+               sizes="(max-width:640px) 86vw, 560px"
+               width="1080" height="1080"
+               alt="願い灯 南湖店は完全予約制に向けて準備中です。"
+               data-i18n-attr="alt:notice.alt"
+               fetchpriority="high" decoding="async">
+        </picture>
+      </a>
+      <p class="hero-notice-title" data-i18n="notice.title">【お知らせ】完全予約制に向けて準備中です</p>
+      <p class="hero-notice-body" data-i18n="notice.body">
+        いつも願い灯をご利用いただきありがとうございます。当初は9月上旬の再開を予定しておりましたが、AI診断システムの構築とサービス体制の整備に、いましばらくお時間をいただくこととなりました。
       </p>
-      <p class="hero-notice-period">休業期間：2026年8月上旬 〜 9月上旬（予定）</p>
-      <p class="hero-notice-body">
-        パワーアップした願い灯にご期待ください。<br>
-        再開時には LINE・Instagram でお知らせいたします。
+      <p class="hero-notice-period" data-i18n="notice.period">再開日：未定（準備が整い次第、お知らせいたします）</p>
+      <p class="hero-notice-body" data-i18n="notice.body2">
+        より一人ひとりと、ゆっくり向き合える特別な時間をご提供するため、完全予約制に向けて準備を進めております。
       </p>
-      <p class="hero-notice-line">LINE公式：@888nsgkb ／ 願い灯 南湖店</p>
+      <p class="hero-notice-line" data-i18n="notice.line">最新のご案内は LINE・Instagram にて ／ LINE公式：@888nsgkb</p>
     </div>
     <p class="hero-label" data-i18n="hero.label">PALM READING × AI</p>
     <h1 data-i18n="hero.title">願い灯</h1>
